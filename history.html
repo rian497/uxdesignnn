@@ -1,170 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZEPHRA — About Us</title>
+    <title>ZEPHRA — History</title>
+
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="common.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Karla', sans-serif;
-            line-height: 1.6;
-            background: #F3F0E7;
-            color: #1D2620;
-            min-height: 100vh;
-            padding-top: 80px;
-        }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-        /* ---------- ABOUT: PAGE TITLE ---------- */
-
-        .page-title-wrap {
-            text-align: center;
-        }
-
-        .page-title {
-            font-family: 'Fraunces', serif;
-            font-weight: 600;
-            font-style: normal;
-            font-size: 42px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #16382C;
-        }
-
-        /* ---------- ABOUT: INTRO ---------- */
-
-        .about-intro {
-            align-items: center;
-        }
-
-        .about-lead {
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-weight: 500;
-            font-size: 20px;
-            color: #16382C;
-            line-height: 1.4;
-            margin-bottom: 24px;
-        }
-
-        .about-copy p {
-            font-size: 15.5px;
-            line-height: 1.8;
-            color: #40473F;
-            margin-bottom: 20px;
-        }
-
-        .about-close {
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-weight: 500;
-            font-size: 20px;
-            color: #16382C;
-            margin-top: 6px;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 460px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(22, 56, 44, 0.12);
-            display: block;
-        }
-
-        /* ---------- ABOUT: SHOWCASE BOXES (flat, no radius) ---------- */
-
-        .showcase-grid {
-            border: 1px solid #DCD7C7;
-        }
-
-        .showcase-box {
-            background: #FFFFFF;
-            padding: 36px 32px;
-            border-right: 1px solid #DCD7C7;
-            border-top: 3px solid #BE5B33;
-        }
-
-        .showcase-box:last-child { border-right: none; }
-
-        .showcase-box h3 {
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-weight: 600;
-            font-size: 22px;
-            color: #16382C;
-            margin-bottom: 12px;
-        }
-
-        .showcase-box p {
-            font-size: 14.5px;
-            line-height: 1.7;
-            color: #40473F;
-            margin-bottom: 18px;
-        }
-
-        .showcase-box a {
-            font-family: 'Karla', sans-serif;
-            font-weight: 600;
-            font-size: 12.5px;
-            letter-spacing: 0.3px;
-            color: #954726;
-            text-decoration: none;
-            border-bottom: 1px solid #954726;
-            padding-bottom: 2px;
-        }
-
-        @media (max-width: 860px) {
-            .page-title { font-size: 30px; }
-            .about-image img { height: 280px; }
-            .showcase-box { border-right: none; border-bottom: 1px solid #DCD7C7; }
-            .showcase-box:last-child { border-bottom: none; }
-        }
-    </style>
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="history.css">
 </head>
+
 <body>
-    <div class="navbar d-flex justify-content-between align-items-center">
-        <div class="nav-left d-flex gap-3">
-            <a href="index.html">Home</a>
-            <a href="history.html" class="active">History</a>
-            <a href="feedback.html">Feedback</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="nav-center">
-            <div class="brand">Zephra</div>
-        </div>
-        <div class="nav-right d-flex align-items-center gap-3">
-            <div class="selector">
+
+    <!-- NAVBAR -->
+    <header class="navbar fixed-top">
+    <div class="nav-wrap">
+
+        <nav class="nav-left">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="history.html" class="nav-item active">History</a>
+            <a href="feedback.html" class="nav-item ">Feedback</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+
+        <a href="index.html" class="nav-brand">Zephra</a>
+
+        <div class="nav-right">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search guides...">
+                <div class="search-btn"></div>
             </div>
-            <div class="icon-group d-flex align-items-center gap-3">
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Search guides...">
-                    <div class="search-icon"></div>
-                </div>
-                <a href="signin.html">Sign In</a>
-                <a href="saved.html">Saved</a>
-            </div>
+            <a href="signin.html" class="nav-item">Sign In</a>
+            <a href="saved.html" class="nav-item">Saved</a>
         </div>
+
     </div>
+</header>
 
     <!-- PAGE TITLE -->
-    <div class="page-title-wrap container py-5">
+    <div class="page-title-wrap">
         <h1 class="page-title">History</h1>
     </div>
 
     <!-- INTRO -->
-    <div class="container py-5">
-        <section class="about-intro row align-items-center">
-        <div class="col-lg-6">
-            <p class="about-lead">At Zephra, we believe good technique is teachable — not talent, not luck.</p>
+    <section class="about-intro">
+        <div>
+            <p class="about-lead">At Zephra, we believe good technique is teachable. Not talent, not luck.</p>
             <div class="about-copy">
                 <p>
-                    We're a small group of club players and coaches who got tired of vague
-                    tips and marketing fluff passed off as advice. Every guide on this site
-                    is written by someone who has actually drilled the shot, not researched it.
+                    We're a small group of club players and coaches. Every guide on this site
+                    is written by someone who has actually practiced the shot, not researched it.
                 </p>
                 <p>
                     From footwork fundamentals to shot selection under pressure, our library
@@ -175,26 +66,25 @@
             </div>
             <p class="about-close">Learn it properly. Play it properly.</p>
         </div>
-        <div class="about-image col-lg-6">
+        <div class="about-image">
             <img src="https://images.unsplash.com/photo-1758798460018-d86989b9524b?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Two players rallying on an outdoor badminton court">
         </div>
     </section>
-    </div>
 
     <!-- SHOWCASE BOXES -->
-    <div class="showcase-wrap container my-5">
-        <div class="showcase-grid row g-0">
-            <div class="showcase-box col-md-4">
+    <div class="showcase-wrap">
+        <div class="showcase-grid">
+            <div class="showcase-box">
                 <h3>Technique</h3>
-                <p>Step-by-step guides on footwork, grip, and shot selection — broken into beginner, intermediate, and advanced tracks.</p>
+                <p>Step-by-step guides on footwork, grip, and shot selection broken into beginner, intermediate, and advanced tracks.</p>
                 <a href="techniques.html">Explore guides →</a>
             </div>
-            <div class="showcase-box col-md-4">
+            <div class="showcase-box">
                 <h3>History</h3>
                 <p>How a British country estate game turned into an Olympic sport in just over a century.</p>
                 <a href="history.html">Read the timeline →</a>
             </div>
-            <div class="showcase-box col-md-4">
+            <div class="showcase-box">
                 <h3>Community</h3>
                 <p>Got a drill that works, or a correction we got wrong? Tell us — this whole site runs on player feedback.</p>
                 <a href="feedback.html">Share feedback →</a>
@@ -202,6 +92,5 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
