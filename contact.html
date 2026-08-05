@@ -188,6 +188,27 @@
             border-top: 3px solid #BE5B33;
         }
 
+        .contact-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 20px;
+        }
+
+        .contact-table td {
+            vertical-align: top;
+            padding: 0;
+        }
+
+        .form-label-cell {
+            width: 160px;
+            padding-top: 14px !important;
+            padding-right: 20px !important;
+        }
+
+        .contact-table .form-control {
+            width: 100%;
+        }
+
         .form-label {
             font-family: 'Karla', sans-serif;
             font-weight: 600;
@@ -226,6 +247,7 @@
             font-size: 14.5px;
             letter-spacing: 0.3px;
             transition: all 0.3s ease;
+            margin-top: 4px;
         }
 
         .btn-send:hover {
@@ -268,6 +290,17 @@
         @media (max-width: 860px) {
             .page-title { font-size: 32px; }
             .contact-card { padding: 30px 24px; }
+            .contact-table, .contact-table tbody, .contact-table tr, .contact-table td {
+                display: block;
+                width: 100%;
+            }
+            .form-label-cell {
+                width: auto;
+                padding: 0 0 8px !important;
+            }
+            .contact-table tr {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -298,7 +331,7 @@
 
     <!-- PAGE TITLE -->
     <div class="page-title-wrap container pt-5 pb-3">
-        <h1 class="page-title">Contact us to get in touch with the Club</h1>
+        <h1 class="page-title">Contact</h1>
     </div>
 
     <!-- FORM -->
@@ -308,25 +341,27 @@
                 <div class="contact-card">
                     <div id="formStatus" class="form-status"></div>
                     <form id="contactForm" novalidate>
-                        <div class="row mb-4">
-                            <div class="col-md-6 mb-4 mb-md-0">
-                                <label class="form-label" for="name">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label" for="email">Email *</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-                                <div class="field-error" id="emailError">Please enter a valid email address.</div>
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label" for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Optional">
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label" for="comment">Comment</label>
-                            <textarea class="form-control" id="comment" name="comment" rows="5" placeholder="How can we help?"></textarea>
-                        </div>
+                        <table class="contact-table">
+                            <tr>
+                                <td class="form-label-cell"><label class="form-label" for="name">Name</label></td>
+                                <td><input type="text" class="form-control" id="name" name="name" placeholder="Your name"></td>
+                            </tr>
+                            <tr>
+                                <td class="form-label-cell"><label class="form-label" for="email">Email *</label></td>
+                                <td>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                                    <div class="field-error" id="emailError">Please enter a valid email address.</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="form-label-cell"><label class="form-label" for="phone">Phone Number</label></td>
+                                <td><input type="tel" class="form-control" id="phone" name="phone" placeholder="Optional"></td>
+                            </tr>
+                            <tr>
+                                <td class="form-label-cell"><label class="form-label" for="comment">Comment</label></td>
+                                <td><textarea class="form-control" id="comment" name="comment" rows="5" placeholder="How can we help?"></textarea></td>
+                            </tr>
+                        </table>
                         <button type="submit" class="btn btn-send" id="sendBtn">Send</button>
                     </form>
                 </div>
