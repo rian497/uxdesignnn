@@ -1,0 +1,149 @@
+.navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #FFFFFF;
+            z-index: 1000;
+            border-bottom: 1px solid #DCD7C7;
+            box-sizing: border-box;
+        }
+
+        .nav-left { display: flex; gap: 20px; }
+
+        .nav-center {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: max-content;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .nav-center .brand {
+            font-weight: 600;
+            font-size: 28px;
+            color: #16382C;
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+        }
+        
+        .navbar a {
+            text-decoration: none;
+            color: #16382C;
+            font-size: 13.5px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #BE5B33;
+            transition: width 0.3s ease;
+        }
+
+        .navbar a:hover::after { width: 100%; }
+        .navbar a:hover { color: #954726; }
+
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+
+        .selector {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #16382C;
+            position: relative;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .selector select {
+            border: none;
+            background: transparent;
+            font-size: 12px;
+            font-family: 'IBM Plex Mono', monospace;
+            color: #16382C;
+            appearance: none;
+            padding: 5px 20px 5px 10px;
+            cursor: pointer;
+        }
+
+        .selector select:focus { outline: none; }
+
+        .selector::after {
+            content: "▾";
+            position: absolute;
+            right: 10px;
+            font-size: 10px;
+            pointer-events: none;
+            color: #5B6259;
+        }
+
+        .icon-group { display: flex; gap: 16px; align-items: center; }
+
+        .icon-group a {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #16382C;
+        }
+
+        .icon-group a:hover { color: #954726; }
+
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 40px;
+        }
+
+        .search-input {
+            width: 0;
+            height: 36px;
+            padding: 8px 12px;
+            border: 2px solid #16382C;
+            border-radius: 20px;
+            font-size: 13px;
+            font-family: 'Source Sans 3', sans-serif;
+            background: white;
+            color: #1D2620;
+            outline: none;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            opacity: 0;
+        }
+
+        .search-input::placeholder { color: #A8A392; }
+
+        .search-icon {
+            position: absolute;
+            right: 0;
+            width: 36px;
+            height: 36px;
+            background: #16382C;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 2;
+        }
+
+        .search-icon:before { content: '🔍'; font-size: 15px; }
+
+        .search-container:hover .search-input {
+            width: 200px;
+            opacity: 1;
+            padding-right: 50px;
+        }
+
+        .search-container:hover .search-icon { background: #954726; }
+        .search-input:focus { border-color: #BE5B33; }
