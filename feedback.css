@@ -1,35 +1,146 @@
+/* Page Typography */
 html body .page-eyebrow {
     font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2F5C46;
 }
 
 html body .page-title {
     font-family: 'Source Sans 3', sans-serif;
-    font-style: normal; /* Remove italic if you want a clean sans-serif look */
+    font-style: normal;
     font-weight: 700;
+    font-size: 44px;
+    color: #16382C;
+    line-height: 1.15;
 }
 
 html body .page-copy {
     font-family: 'Source Sans 3', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #40473F;
+    max-width: 680px;
+}
+
+/* Card Styling */
+.feedback-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(22, 56, 44, 0.06);
+    border: 1px solid #DCD7C7;
 }
 
 html body .form-label {
     font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
     font-weight: 600;
+    color: #16382C;
+    margin-bottom: 10px;
 }
 
+/* Form Controls */
 html body .form-control {
     font-family: 'Source Sans 3', sans-serif;
+    border: 1.5px solid #DCD7C7;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 15.5px;
+    color: #1D2620;
+    background-color: #FAF8F5;
+    transition: all 0.25s ease;
+}
+
+html body .form-control:focus {
+    border-color: #BE5B33;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(190, 91, 51, 0.12);
+    outline: none;
+}
+
+/* Topic Pills */
+.topic-pill input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .topic-pill span {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1.5px solid #DCD7C7;
+    border-radius: 30px;
+    background: #FAF8F5;
     font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #16382C;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.topic-pill input:checked + span {
+    background: #16382C;
+    color: #FFFFFF;
+    border-color: #16382C;
+}
+
+.topic-pill:hover span {
+    border-color: #BE5B33;
+}
+
+/* Sentiment Buttons */
+.sentiment-btn input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .sentiment-btn span {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1.5px solid #DCD7C7;
+    border-radius: 8px;
+    background: #FAF8F5;
     font-family: 'Source Sans 3', sans-serif;
-    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5B6259;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
+.sentiment-btn input:checked + span {
+    background: #BE5B33;
+    color: #FFFFFF;
+    border-color: #BE5B33;
+}
+
+/* Privacy Note */
 .privacy-note {
     font-family: 'Source Sans 3', sans-serif;
+    font-size: 12px;
+    color: #8C887B;
+}
+
+/* Thank You Message */
+#thankYouMessage {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #E6EFE9;
+    color: #16382C;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    html body .page-title {
+        font-size: 32px;
+    }
+
+    .privacy-note {
+        display: none;
+    }
 }
