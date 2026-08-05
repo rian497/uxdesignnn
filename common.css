@@ -2,7 +2,7 @@
    COMMON STYLES & NAVBAR
    ========================================================================== */
 
-/* Navbar Layout Container Fixes */
+/* Header Container */
 html body .navbar {
     display: flex;
     justify-content: space-between;
@@ -11,13 +11,13 @@ html body .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #FFFFFF;
+    background: #FFFFFF;
     z-index: 1000;
     border-bottom: 1px solid #DCD7C7;
     box-sizing: border-box;
 }
 
-html body .nav-wrapper {
+html body .nav-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,41 +25,45 @@ html body .nav-wrapper {
     width: 100%;
 }
 
+/* Left Nav Group */
 html body .nav-left { 
     display: flex; 
     align-items: center;
-    gap: 20px; 
+    gap: 24px; 
 }
 
-html body .nav-center {
+/* Centered Brand Title */
+html body .nav-brand {
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: max-content;
-    text-align: center;
-    line-height: 1.1;
-}
-
-html body .nav-center .brand {
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
     font-weight: 600;
     font-size: 28px;
     color: #16382C;
-    font-family: 'Fraunces', serif;
-    font-style: italic;
     text-decoration: none;
+    line-height: 1.1;
+    transition: color 0.3s ease;
 }
 
-html body .navbar a {
+html body .nav-brand:hover {
+    color: #BE5B33;
+}
+
+/* Standard Nav Links */
+html body .nav-item {
     text-decoration: none;
     color: #16382C;
     font-size: 13.5px;
     font-weight: 600;
+    font-family: 'Source Sans 3', sans-serif;
     position: relative;
+    padding-bottom: 2px;
     transition: color 0.3s ease;
 }
 
-html body .navbar a::after {
+html body .nav-item::after {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -70,74 +74,32 @@ html body .navbar a::after {
     transition: width 0.3s ease;
 }
 
-html body .navbar a:hover::after { 
+html body .nav-item:hover::after,
+html body .nav-item.active::after { 
     width: 100%; 
 }
 
-html body .navbar a:hover { 
-    color: #954726; 
+html body .nav-item:hover,
+html body .nav-item.active { 
+    color: #BE5B33; 
 }
 
+/* Right Side Icon & Action Group */
 html body .nav-right { 
     display: flex; 
     align-items: center; 
-    gap: 20px; 
+    gap: 18px; 
 }
 
-/* Language / Region Selectors */
-html body .selector {
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-    color: #16382C;
-    position: relative;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-html body .selector select {
-    border: none;
-    background: transparent;
-    font-size: 12px;
-    font-family: 'IBM Plex Mono', monospace;
-    color: #16382C;
-    appearance: none;
-    padding: 5px 20px 5px 10px;
-    cursor: pointer;
-}
-
-html body .selector select:focus { 
-    outline: none; 
-}
-
-html body .selector::after {
-    content: "▾";
-    position: absolute;
-    right: 10px;
-    font-size: 10px;
-    pointer-events: none;
-    color: #5B6259;
-}
-
-/* Icon & Action Link Group */
-html body .icon-group { 
-    display: flex; 
-    gap: 16px; 
-    align-items: center; 
-}
-
-html body .icon-group a {
+html body .nav-right .nav-item {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
     text-transform: uppercase;
-    color: #16382C;
+    letter-spacing: 0.5px;
 }
 
-html body .icon-group a:hover { 
-    color: #954726; 
-}
-
-/* Search Bar Component */
-html body .search-container {
+/* Expandable Search Input */
+html body .search-box {
     position: relative;
     display: flex;
     align-items: center;
@@ -152,10 +114,10 @@ html body .search-input {
     border-radius: 20px;
     font-size: 13px;
     font-family: 'Source Sans 3', sans-serif;
-    background: white;
+    background: #FFFFFF;
     color: #1D2620;
     outline: none;
-    transition: all 0.4s ease;
+    transition: all 0.35s ease;
     opacity: 0;
 }
 
@@ -163,7 +125,7 @@ html body .search-input::placeholder {
     color: #A8A392; 
 }
 
-html body .search-icon {
+html body .search-btn {
     position: absolute;
     right: 0;
     width: 36px;
@@ -174,23 +136,26 @@ html body .search-icon {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: background-color 0.3s ease;
     z-index: 2;
 }
 
-html body .search-icon::before { 
+html body .search-btn::before { 
     content: '🔍'; 
-    font-size: 15px; 
+    font-size: 13px; 
 }
 
-html body .search-container:hover .search-input {
-    width: 200px;
+/* Expand state */
+html body .search-box:hover .search-input,
+html body .search-box:focus-within .search-input {
+    width: 210px;
     opacity: 1;
-    padding-right: 50px;
+    padding-right: 46px;
 }
 
-html body .search-container:hover .search-icon { 
-    background: #954726; 
+html body .search-box:hover .search-btn,
+html body .search-box:focus-within .search-btn { 
+    background: #BE5B33; 
 }
 
 html body .search-input:focus { 
