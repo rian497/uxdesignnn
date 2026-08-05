@@ -6,13 +6,8 @@
     <title>ZEPHRA — About Us</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Karla', sans-serif;
             line-height: 1.6;
@@ -25,9 +20,6 @@
         /* ---------- NAVBAR (unchanged system) ---------- */
 
         .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             padding: 15px 30px;
             position: fixed;
             top: 0;
@@ -37,8 +29,6 @@
             border-bottom: 1px solid #DCD7C7;
             box-sizing: border-box;
         }
-
-        .nav-left { display: flex; gap: 20px; }
 
         .nav-center {
             position: absolute;
@@ -80,10 +70,7 @@
         .navbar a.active::after { width: 100%; background: #16382C; }
         .navbar a.active { color: #16382C; }
 
-        .nav-right { display: flex; align-items: center; gap: 20px; }
-
         .selector {
-            display: flex;
             align-items: center;
             font-size: 13px;
             color: #16382C;
@@ -114,8 +101,6 @@
             pointer-events: none;
             color: #5B6259;
         }
-
-        .icon-group { display: flex; gap: 16px; align-items: center; }
 
         .icon-group a {
             font-family: 'Karla', sans-serif;
@@ -464,9 +449,6 @@
         /* ---------- ABOUT: PAGE TITLE ---------- */
 
         .page-title-wrap {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 50px 30px 10px;
             text-align: center;
         }
 
@@ -483,12 +465,6 @@
         /* ---------- ABOUT: INTRO ---------- */
 
         .about-intro {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 50px 30px 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
             align-items: center;
         }
 
@@ -529,16 +505,7 @@
 
         /* ---------- ABOUT: SHOWCASE BOXES (flat, no radius) ---------- */
 
-        .showcase-wrap {
-            max-width: 1180px;
-            margin: 70px auto 100px;
-            padding: 0 30px;
-        }
-
         .showcase-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
             border: 1px solid #DCD7C7;
         }
 
@@ -588,17 +555,15 @@
             .product-details { padding: 34px; }
             .action-buttons { flex-direction: column; }
             .page-title { font-size: 30px; }
-            .about-intro { grid-template-columns: 1fr; gap: 30px; }
             .about-image img { height: 280px; }
-            .showcase-grid { grid-template-columns: 1fr; }
             .showcase-box { border-right: none; border-bottom: 1px solid #DCD7C7; }
             .showcase-box:last-child { border-bottom: none; }
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="nav-left">
+    <div class="navbar d-flex justify-content-between align-items-center">
+        <div class="nav-left d-flex gap-3">
             <a href="index.html">Home</a>
             <a href="history.html" class="active">History</a>
             <a href="feedback.html">Feedback</a>
@@ -607,10 +572,10 @@
         <div class="nav-center">
             <div class="brand">Zephra</div>
         </div>
-        <div class="nav-right">
+        <div class="nav-right d-flex align-items-center gap-3">
             <div class="selector">
             </div>
-            <div class="icon-group">
+            <div class="icon-group d-flex align-items-center gap-3">
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Search guides...">
                     <div class="search-icon"></div>
@@ -622,13 +587,13 @@
     </div>
 
     <!-- PAGE TITLE -->
-    <div class="page-title-wrap">
+    <div class="page-title-wrap container py-5">
         <h1 class="page-title">History</h1>
     </div>
 
     <!-- INTRO -->
-    <section class="about-intro">
-        <div>
+    <section class="about-intro container row align-items-center py-5">
+        <div class="col-lg-6">
             <p class="about-lead">At Zephra, we believe good technique is teachable — not talent, not luck.</p>
             <div class="about-copy">
                 <p>
@@ -645,30 +610,32 @@
             </div>
             <p class="about-close">Learn it properly. Play it properly.</p>
         </div>
-        <div class="about-image">
+        <div class="about-image col-lg-6">
             <img src="https://images.unsplash.com/photo-1758798460018-d86989b9524b?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Two players rallying on an outdoor badminton court">
         </div>
     </section>
 
     <!-- SHOWCASE BOXES -->
-    <div class="showcase-wrap">
-        <div class="showcase-grid">
-            <div class="showcase-box">
+    <div class="showcase-wrap container my-5">
+        <div class="showcase-grid row g-0">
+            <div class="showcase-box col-md-4">
                 <h3>Technique</h3>
                 <p>Step-by-step guides on footwork, grip, and shot selection — broken into beginner, intermediate, and advanced tracks.</p>
                 <a href="techniques.html">Explore guides →</a>
             </div>
-            <div class="showcase-box">
+            <div class="showcase-box col-md-4">
                 <h3>History</h3>
                 <p>How a British country estate game turned into an Olympic sport in just over a century.</p>
                 <a href="history.html">Read the timeline →</a>
             </div>
-            <div class="showcase-box">
+            <div class="showcase-box col-md-4">
                 <h3>Community</h3>
                 <p>Got a drill that works, or a correction we got wrong? Tell us — this whole site runs on player feedback.</p>
                 <a href="feedback.html">Share feedback →</a>
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
