@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEPHRA — Account</title>
+
+    <!-- Standardized Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap & Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="signin.css">
+</head>
+
+<body>
+
+    <!-- FIXED NAVBAR -->
+    <header class="navbar fixed-top">
+        <div class="nav-wrap">
+
+            <nav class="nav-left">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="history.html" class="nav-item">History</a>
+                <a href="feedback.html" class="nav-item">Feedback</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+
+            <a href="index.html" class="nav-brand">Zephra</a>
+
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Search guides...">
+                    <div class="search-btn"></div>
+                </div>
+                <a href="signin.html" class="nav-item active">Sign In</a>
+                <a href="saved.html" class="nav-item">Saved</a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MAIN FORM CONTAINER -->
+    <main class="container py-5 my-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-5">
+
+                <div class="auth-card">
+                    <!-- Toggle Switch -->
+                    <div class="auth-tabs mb-4">
+                        <button class="auth-tab active" id="tabSignIn" onclick="switchTab('signin')">Sign In</button>
+                        <button class="auth-tab" id="tabSignUp" onclick="switchTab('signup')">Create Account</button>
+                    </div>
+
+                    <!-- SIGN IN FORM -->
+                    <form id="signInForm" class="auth-form">
+                        <div class="auth-header mb-4">
+                            <h1 class="auth-title">Welcome back.</h1>
+                            <p class="auth-subtitle">Access your bookmarked court guides and custom drills.</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="loginEmail">Email Address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="you@domain.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <label class="form-label mb-0" for="loginPassword">Password</label>
+                                <a href="#" class="forgot-link">Forgot?</a>
+                            </div>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember this browser</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-auth w-100">Sign In</button>
+                    </form>
+
+                    <!-- CREATE ACCOUNT FORM (Hidden by default) -->
+                    <form id="signUpForm" class="auth-form d-none">
+                        <div class="auth-header mb-4">
+                            <h1 class="auth-title">Join the club.</h1>
+                            <p class="auth-subtitle">Track your training notes and save advanced tactics.</p>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="registerName">Full Name</label>
+                            <input type="text" class="form-control" id="registerName" placeholder="Coach Dave or Lin Dan" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="registerEmail">Email Address</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="you@domain.com" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label" for="registerPassword">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Minimum 8 characters" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-auth w-100">Create Account</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function switchTab(mode) {
+            const signInForm = document.getElementById('signInForm');
+            const signUpForm = document.getElementById('signUpForm');
+            const tabSignIn = document.getElementById('tabSignIn');
+            const tabSignUp = document.getElementById('tabSignUp');
+
+            if (mode === 'signin') {
+                signInForm.classList.remove('d-none');
+                signUpForm.classList.add('d-none');
+                tabSignIn.classList.add('active');
+                tabSignUp.classList.remove('active');
+            } else {
+                signInForm.classList.add('d-none');
+                signUpForm.classList.remove('d-none');
+                tabSignIn.classList.remove('active');
+                tabSignUp.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

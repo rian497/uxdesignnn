@@ -1,0 +1,129 @@
+/* ==========================================================================
+   AUTHENTICATION / SIGN IN STYLES
+   ========================================================================== */
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #F3F0E7;
+    color: #1D2620;
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.auth-card {
+    background: #FFFFFF;
+    border: 1px solid #DCD7C7;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 12px 35px rgba(22, 56, 44, 0.05);
+}
+
+/* Tab Toggle */
+.auth-tabs {
+    display: flex;
+    background: #FAF8F5;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid #DCD7C7;
+}
+
+.auth-tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #5B6259;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+.auth-tab.active {
+    background: #16382C;
+    color: #FFFFFF;
+}
+
+/* Titles */
+.auth-title {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 32px;
+    color: #16382C;
+    margin-bottom: 6px;
+}
+
+.auth-subtitle {
+    font-size: 14.5px;
+    color: #5B6259;
+}
+
+/* Forms */
+html body .form-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #16382C;
+    font-weight: 600;
+}
+
+html body .form-control {
+    border: 1px solid #DCD7C7;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 15px;
+    background-color: #FAF8F5;
+    color: #1D2620;
+}
+
+html body .form-control:focus {
+    border-color: #BE5B33;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(190, 91, 51, 0.12);
+    outline: none;
+}
+
+.form-check-label {
+    font-size: 13.5px;
+    color: #5B6259;
+}
+
+.forgot-link {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: #BE5B33;
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.btn-auth {
+    background-color: #16382C;
+    color: #FFFFFF;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.25s ease;
+}
+
+.btn-auth:hover {
+    background-color: #BE5B33;
+    color: #FFFFFF;
+}
+
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 24px;
+    }
+}
