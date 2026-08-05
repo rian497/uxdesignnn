@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZEPHRA — Badminton, Learned Properly</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -26,7 +26,7 @@
         }
 
         body {
-            font-family: 'Karla', sans-serif;
+            font-family: 'Source Sans 3', sans-serif;
             line-height: 1.6;
             background: var(--paper);
             color: var(--ink);
@@ -62,21 +62,11 @@
 
         .nav-center .brand {
             font-weight: 600;
-            font-size: 25px;
+            font-size: 28px;
             color: var(--pine);
             font-family: 'Fraunces', serif;
             font-style: italic;
         }
-
-        .nav-center .brand-sub {
-            font-family: 'Karla', sans-serif;
-            font-weight: 600;
-            font-size: 8.5px;
-            letter-spacing: 1.6px;
-            text-transform: uppercase;
-            color: var(--ink-soft);
-        }
-
         .navbar a {
             text-decoration: none;
             color: var(--pine);
@@ -107,14 +97,14 @@
             font-size: 13px;
             color: var(--pine);
             position: relative;
-            font-family: 'Karla', sans-serif;
+            font-family: 'IBM Plex Mono', monospace;
         }
 
         .selector select {
             border: none;
             background: transparent;
             font-size: 12px;
-            font-family: 'Karla', sans-serif;
+            font-family: 'IBM Plex Mono', monospace;
             color: var(--pine);
             appearance: none;
             -webkit-appearance: none;
@@ -137,10 +127,9 @@
         .icon-group { display: flex; gap: 16px; align-items: center; }
 
         .icon-group a {
-            font-family: 'Karla', sans-serif;
-            font-weight: 600;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 12px;
-            letter-spacing: 0.3px;
+            text-transform: uppercase;
             color: var(--pine);
         }
 
@@ -160,7 +149,7 @@
             border: 2px solid var(--pine);
             border-radius: 20px;
             font-size: 13px;
-            font-family: 'Karla', sans-serif;
+            font-family: 'Source Sans 3', sans-serif;
             background: white;
             color: var(--ink);
             outline: none;
@@ -211,10 +200,9 @@
         }
 
         .hero-eyebrow {
-            font-family: 'Karla', sans-serif;
-            font-weight: 600;
-            font-size: 12px;
-            letter-spacing: 1.4px;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 17px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--court);
             margin-bottom: 18px;
@@ -244,7 +232,7 @@
             border-radius: 50px;
             font-size: 14.5px;
             font-weight: 600;
-            font-family: 'Karla', sans-serif;
+            font-family: 'Source Sans 3', sans-serif;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -345,10 +333,9 @@
         .banner-caption a {
             display: inline-block;
             margin-top: 14px;
-            font-family: 'Karla', sans-serif;
-            font-weight: 600;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 12px;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
             color: #F3F0E7;
             border-bottom: 1px solid rgba(243,240,231,0.6);
@@ -364,10 +351,9 @@
         }
 
         .section-label {
-            font-family: 'Karla', sans-serif;
-            font-weight: 600;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 12px;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             color: var(--ink-soft);
             border-bottom: 1px solid var(--line);
@@ -406,7 +392,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-family: 'Karla', sans-serif;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 10px;
             font-weight: 600;
             text-align: center;
@@ -423,10 +409,9 @@
         }
 
         .eyebrow {
-            font-family: 'Karla', sans-serif;
-            font-weight: 600;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 11.5px;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             color: var(--court);
             margin-bottom: 14px;
@@ -453,10 +438,8 @@
 
         .meta-line {
             display: flex;
-            font-family: 'Karla', sans-serif;
-            font-weight: 600;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 12px;
-            letter-spacing: 0.3px;
             text-transform: uppercase;
             color: var(--ink-soft);
             margin-bottom: 28px;
@@ -497,22 +480,12 @@
         <div class="nav-left">
             <a href="index.html">Home</a>
             <a href="history.html">History</a>
-            <a href="techniques.html">Techniques</a>
             <a href="feedback.html">Feedback</a>
             <a href="contact.html">Contact</a>
         </div>
         <div class="nav-center">
             <div class="brand">Zephra</div>
-            <div class="brand-sub">Badminton, learned properly</div>
         </div>
-        <div class="nav-right">
-            <div class="selector">
-                <select name="level" id="level">
-                    <option>Beginner</option>
-                    <option selected>Intermediate</option>
-                    <option>Advanced</option>
-                </select>
-            </div>
             <div class="icon-group">
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Search guides...">
@@ -527,7 +500,7 @@
     <!-- HERO -->
     <section class="hero">
         <div>
-            <div class="hero-eyebrow">Zephra · Badminton Club</div>
+            <div class="hero-eyebrow">Zephra</div>
             <h1 class="hero-title">Every rally starts with a plan</h1>
             <p class="hero-copy">
                 We're a small community of players documenting the techniques, history,
@@ -557,21 +530,7 @@
         <div class="product-container">
             <div class="product-image">
                 <div class="award-badge">GUIDE<br>No. 07</div>
-                <svg class="shuttle-mark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <g stroke="#2F5C46" stroke-width="1.4" fill="#FFFFFF">
-                        <path d="M100 95 L58 15 L70 20 Z"/>
-                        <path d="M100 95 L78 8 L88 16 Z"/>
-                        <path d="M100 95 L100 5 L108 12 Z"/>
-                        <path d="M100 95 L122 8 L112 16 Z"/>
-                        <path d="M100 95 L142 15 L130 20 Z"/>
-                        <path d="M100 95 L78 8 L68 14 Z" fill-opacity="0.55"/>
-                        <path d="M100 95 L122 8 L132 14 Z" fill-opacity="0.55"/>
-                    </g>
-                    <ellipse cx="100" cy="97" rx="26" ry="7" fill="#BE5B33" opacity="0.9"/>
-                    <path d="M78 100 Q100 165 122 100 Q100 118 78 100 Z" fill="#BE5B33"/>
-                    <ellipse cx="100" cy="100" rx="22" ry="9" fill="#DC8552"/>
-                </svg>
-            </div>
+    
             <div class="product-details">
                 <div class="eyebrow">Technique Guide</div>
                 <h2 class="product-title">The Jump Smash: Timing, Power &amp; Placement</h2>
