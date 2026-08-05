@@ -13,28 +13,16 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --paper: #F3F0E7;
-            --surface: #FFFFFF;
-            --ink: #1D2620;
-            --ink-soft: #5B6259;
-            --pine: #16382C;
-            --court: #2F5C46;
-            --cork: #BE5B33;
-            --cork-dark: #954726;
-            --line: #DCD7C7;
-        }
-
         body {
             font-family: 'Source Sans 3', sans-serif;
             line-height: 1.6;
-            background: var(--paper);
-            color: var(--ink);
+            background: #F3F0E7;
+            color: #1D2620;
             min-height: 100vh;
             padding-top: 80px;
         }
 
-        /* ---------- NAVBAR (unchanged system) ---------- */
+        /* ---------- NAVBAR ---------- */
 
         .navbar {
             display: flex;
@@ -44,9 +32,9 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background-color: var(--surface);
+            background-color: #FFFFFF;
             z-index: 1000;
-            border-bottom: 1px solid var(--line);
+            border-bottom: 1px solid #DCD7C7;
             box-sizing: border-box;
         }
 
@@ -54,8 +42,10 @@
 
         .nav-center {
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: max-content;
             text-align: center;
             line-height: 1.1;
         }
@@ -63,13 +53,14 @@
         .nav-center .brand {
             font-weight: 600;
             font-size: 28px;
-            color: var(--pine);
+            color: #16382C;
             font-family: 'Fraunces', serif;
             font-style: italic;
         }
+        
         .navbar a {
             text-decoration: none;
-            color: var(--pine);
+            color: #16382C;
             font-size: 13.5px;
             font-weight: 600;
             position: relative;
@@ -82,12 +73,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--cork);
+            background: #BE5B33;
             transition: width 0.3s ease;
         }
 
         .navbar a:hover::after { width: 100%; }
-        .navbar a:hover { color: var(--cork-dark); }
+        .navbar a:hover { color: #954726; }
 
         .nav-right { display: flex; align-items: center; gap: 20px; }
 
@@ -95,7 +86,7 @@
             display: flex;
             align-items: center;
             font-size: 13px;
-            color: var(--pine);
+            color: #16382C;
             position: relative;
             font-family: 'IBM Plex Mono', monospace;
         }
@@ -105,10 +96,8 @@
             background: transparent;
             font-size: 12px;
             font-family: 'IBM Plex Mono', monospace;
-            color: var(--pine);
+            color: #16382C;
             appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
             padding: 5px 20px 5px 10px;
             cursor: pointer;
         }
@@ -121,7 +110,7 @@
             right: 10px;
             font-size: 10px;
             pointer-events: none;
-            color: var(--ink-soft);
+            color: #5B6259;
         }
 
         .icon-group { display: flex; gap: 16px; align-items: center; }
@@ -130,10 +119,10 @@
             font-family: 'IBM Plex Mono', monospace;
             font-size: 12px;
             text-transform: uppercase;
-            color: var(--pine);
+            color: #16382C;
         }
 
-        .icon-group a:hover { color: var(--cork-dark); }
+        .icon-group a:hover { color: #954726; }
 
         .search-container {
             position: relative;
@@ -146,16 +135,15 @@
             width: 0;
             height: 36px;
             padding: 8px 12px;
-            border: 2px solid var(--pine);
+            border: 2px solid #16382C;
             border-radius: 20px;
             font-size: 13px;
             font-family: 'Source Sans 3', sans-serif;
             background: white;
-            color: var(--ink);
+            color: #1D2620;
             outline: none;
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
             opacity: 0;
-            transform: translateX(40px);
         }
 
         .search-input::placeholder { color: #A8A392; }
@@ -165,7 +153,7 @@
             right: 0;
             width: 36px;
             height: 36px;
-            background: var(--pine);
+            background: #16382C;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -180,12 +168,11 @@
         .search-container:hover .search-input {
             width: 200px;
             opacity: 1;
-            transform: translateX(0);
             padding-right: 50px;
         }
 
-        .search-container:hover .search-icon { background: var(--cork-dark); }
-        .search-input:focus { border-color: var(--cork); }
+        .search-container:hover .search-icon { background: #954726; }
+        .search-input:focus { border-color: #BE5B33; }
 
         /* ---------- HERO ---------- */
 
@@ -204,7 +191,7 @@
             font-size: 17px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--court);
+            color: #2F5C46;
             margin-bottom: 18px;
         }
 
@@ -214,7 +201,7 @@
             font-weight: 600;
             font-size: 46px;
             line-height: 1.1;
-            color: var(--pine);
+            color: #16382C;
             margin-bottom: 22px;
         }
 
@@ -240,27 +227,28 @@
         }
 
         .btn-primary {
-            background: var(--cork);
+            background: #BE5B33;
             color: white;
             box-shadow: 0 4px 15px rgba(190, 91, 51, 0.3);
         }
 
         .btn-primary:hover {
-            background: var(--cork-dark);
-            transform: translateY(-2px);
+            background: #954726;
+            margin-top: -2px;
+            margin-bottom: 2px;
             box-shadow: 0 6px 20px rgba(190, 91, 51, 0.4);
         }
 
         .btn-text {
             background: transparent;
-            color: var(--pine);
+            color: #16382C;
             padding: 15px 0;
             font-weight: 600;
-            border-bottom: 2px solid var(--pine);
+            border-bottom: 2px solid #16382C;
             border-radius: 0;
         }
 
-        .btn-text:hover { color: var(--cork-dark); border-color: var(--cork-dark); }
+        .btn-text:hover { color: #954726; border-color: #954726; }
 
         .hero-images {
             display: grid;
@@ -355,14 +343,14 @@
             font-size: 12px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--ink-soft);
-            border-bottom: 1px solid var(--line);
+            color: #5B6259;
+            border-bottom: 1px solid #DCD7C7;
             padding-bottom: 14px;
             margin-bottom: 30px;
         }
 
         .product-container {
-            background: var(--surface);
+            background: #FFFFFF;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(22, 56, 44, 0.1);
             overflow: hidden;
@@ -386,7 +374,7 @@
             right: 20px;
             width: 78px;
             height: 78px;
-            background: var(--pine);
+            background: #16382C;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -413,12 +401,12 @@
             font-size: 11.5px;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            color: var(--court);
+            color: #2F5C46;
             margin-bottom: 14px;
         }
 
         .product-title {
-            color: var(--pine);
+            color: #16382C;
             font-family: 'Fraunces', serif;
             font-style: italic;
             font-weight: 600;
@@ -434,21 +422,21 @@
             margin-bottom: 24px;
         }
 
-        .highlight { color: var(--cork-dark); font-weight: 600; }
+        .highlight { color: #954726; font-weight: 600; }
 
         .meta-line {
             display: flex;
             font-family: 'IBM Plex Mono', monospace;
             font-size: 12px;
             text-transform: uppercase;
-            color: var(--ink-soft);
+            color: #5B6259;
             margin-bottom: 28px;
         }
 
         .meta-line span {
             padding-right: 14px;
             margin-right: 14px;
-            border-right: 1px solid var(--line);
+            border-right: 1px solid #DCD7C7;
         }
 
         .meta-line span:last-child { border-right: none; }
@@ -457,11 +445,16 @@
 
         .btn-secondary {
             background: white;
-            color: var(--pine);
-            border: 2px solid var(--pine);
+            color: #16382C;
+            border: 2px solid #16382C;
         }
 
-        .btn-secondary:hover { background: var(--pine); color: white; transform: translateY(-2px); }
+        .btn-secondary:hover { 
+            background: #16382C; 
+            color: white; 
+            margin-top: -2px;
+            margin-bottom: 2px;
+        }
 
         @media (max-width: 860px) {
             .hero { grid-template-columns: 1fr; padding-top: 40px; }
@@ -486,14 +479,13 @@
         <div class="nav-center">
             <div class="brand">Zephra</div>
         </div>
-            <div class="icon-group">
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Search guides...">
-                    <div class="search-icon"></div>
-                </div>
-                <a href="signin.html">Sign In</a>
-                <a href="saved.html">Saved</a>
+        <div class="icon-group">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search guides...">
+                <div class="search-icon"></div>
             </div>
+            <a href="signin.html">Sign In</a>
+            <a href="saved.html">Saved</a>
         </div>
     </div>
 
@@ -510,8 +502,8 @@
             <a href="techniques.html" class="btn btn-primary">Browse Guides</a>
         </div>
         <div class="hero-images">
-            <img class="img-a" src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?fm=jpg&q=70&w=700&auto=format&fit=crop" alt="Shuttlecock resting on a badminton racket">
-            <img class="img-b" src="https://images.unsplash.com/photo-1758798460018-d86989b9524b?fm=jpg&q=70&w=700&auto=format&fit=crop" alt="Two players rallying on an outdoor badminton court">
+            <img class="img-a" src="lzj.jpg" alt="Shuttlecock resting on a badminton racket">
+            <img class="img-b" src="shiyuqi.jpg" alt="Two players rallying on an outdoor badminton court">
         </div>
     </section>
 
@@ -530,7 +522,7 @@
         <div class="product-container">
             <div class="product-image">
                 <div class="award-badge">GUIDE<br>No. 07</div>
-    
+            </div>
             <div class="product-details">
                 <div class="eyebrow">Technique Guide</div>
                 <h2 class="product-title">The Jump Smash: Timing, Power &amp; Placement</h2>
