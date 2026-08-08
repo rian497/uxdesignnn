@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guides & Techniques — ZEPHRA</title>
+
+  <!-- BOOTSTRAP 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- YOUR CUSTOM CSS -->
+  <link rel="stylesheet" href="common.css" />
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- CUSTOM STYLES FOR THE TABS -->
+  <style>
+    .nav-pills .nav-link {
+        color: #495057;
+        font-family: 'Source Sans 3', sans-serif;
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 12px 20px;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+    .nav-pills .nav-link.active {
+        background-color: #1a362d;
+        color: #ffffff;
+    }
+    .nav-pills .nav-link:hover:not(.active) {
+        background-color: #e9ecef;
+    }
+    .guide-content-title {
+        font-family: 'Fraunces', serif;
+        color: #1a362d;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar fixed-top">
+    <div class="nav-wrap">
+      <nav class="nav-left">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="history.html" class="nav-item">History</a>
+        <a href="feedback.html" class="nav-item">Feedback</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </nav>
+      <a href="index.html" class="nav-brand">Zephra</a>
+      <div class="nav-right">
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="Search guides..." />
+          <div class="search-btn"></div>
+        </div>
+        <a href="signin.html" class="nav-item">Sign In</a>
+        <a href="saved.html" class="nav-item">Saved</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN GUIDES SECTION -->
+  <div class="container" style="margin-top: 120px; margin-bottom: 80px; max-width: 1200px;">
+    
+    <div class="row">
+      <!-- SIDEBAR TABS -->
+      <div class="col-md-4 col-lg-3 mb-4">
+        <h4 class="mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; text-transform: uppercase; color: #5a7066;">
+            All Guides
+        </h4>
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link active" id="v-pills-smash-tab" data-bs-toggle="pill" data-bs-target="#v-pills-smash" type="button" role="tab" aria-selected="true">
+            The Jump Smash
+          </button>
+          <button class="nav-link" id="v-pills-split-tab" data-bs-toggle="pill" data-bs-target="#v-pills-split" type="button" role="tab" aria-selected="false">
+            The Split Step
+          </button>
+          <button class="nav-link" id="v-pills-backhand-tab" data-bs-toggle="pill" data-bs-target="#v-pills-backhand" type="button" role="tab" aria-selected="false">
+            The Backhand Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- CONTENT AREA -->
+      <div class="col-md-8 col-lg-9 bg-white p-5 shadow-sm" style="border-radius: 15px;">
+        <div class="tab-content" id="v-pills-tabContent">
+          
+          <!-- TAB 1: JUMP SMASH -->
+          <div class="tab-pane fade show active" id="v-pills-smash" role="tabpanel" aria-labelledby="v-pills-smash-tab">
+            <h1 class="guide-content-title">The Jump Smash: Timing, Power &amp; Placement</h1>
+            <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
+                Advanced &bull; 9 Min Read
+            </p>
+            <img src="https://th.bing.com/th/id/OIP.d3U6xbTCnEmOMgTwuRZRxAHaLH?w=115&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" alt="Jump Smash" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover; object-position: top;">
+            
+            <h4>The Kinetic Chain</h4>
+            <p>Real power comes from the kinetic chain: legs load, hips rotate, shoulder follows, and the wrist snap arrives last, a split second before contact. This guide breaks the shot into the three phases coaches actually teach, with a drill for each.</p>
+            <p><em>(Add your full paragraphs, videos, or diagrams for this guide here...)</em></p>
+          </div>
+
+          <!-- TAB 2: SPLIT STEP -->
+          <div class="tab-pane fade" id="v-pills-split" role="tabpanel" aria-labelledby="v-pills-split-tab">
+            <h1 class="guide-content-title">The Split Step: Foundation of Court Movement</h1>
+            <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
+                Fundamentals &bull; 6 Min Read
+            </p>
+            <img src="https://images.unsplash.com/photo-1611250282006-4484dd3fba6b?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Footwork" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover;">
+            
+            <h4>Neutralizing Deception</h4>
+            <p>If you are constantly late to the shuttle, you aren't too slow—you're just missing your split step. A properly timed pre-load hop neutralizes your opponent's deception and sets up explosive, directional movement to any corner of the court.</p>
+            <p><em>(Add your full paragraphs, videos, or diagrams for this guide here...)</em></p>
+          </div>
+
+          <!-- TAB 3: BACKHAND CLEAR -->
+          <div class="tab-pane fade" id="v-pills-backhand" role="tabpanel" aria-labelledby="v-pills-backhand-tab">
+            <h1 class="guide-content-title">The Backhand Clear: Technique Over Brute Force</h1>
+            <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
+                Intermediate &bull; 7 Min Read
+            </p>
+            <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?fm=jpg&q=70&w=1200&auto=format&fit=crop" alt="Backhand" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover;">
+            
+            <h4>Forearm Supination</h4>
+            <p>Stop trying to muscle the shuttle. A baseline-to-baseline backhand relies on a relaxed grip and sharp forearm supination. Learn how to generate effortless repulsion and recover instantly without straining your elbow.</p>
+            <p><em>(Add your full paragraphs, videos, or diagrams for this guide here...)</em></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOTSTRAP 5 JAVASCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
