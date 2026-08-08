@@ -24,7 +24,6 @@
 <body>
 
     <!-- NAVBAR -->
-    <!-- MASTER NAVBAR SNIPPET -->
     <header class="navbar fixed-top">
         <div class="nav-wrap">
 
@@ -89,33 +88,147 @@
         </div>
     </section>
 
-    <!-- FEATURED GUIDE SECTION -->
-    <div class="featured-wrap">
-        <div class="section-label">Featured Guide</div>
-        <div class="product-container">
-            <div class="product-image">
-                <!-- Add your image here -->
-                <img src="https://th.bing.com/th/id/OIP.d3U6xbTCnEmOMgTwuRZRxAHaLH?w=115&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3"
-                    alt="Player executing a jump smash">
-            </div>
-            <div class="product-details">
-                <div class="eyebrow">Guide</div>
-                <h2 class="product-title">The Jump Smash: Timing, Power &amp; Placement</h2>
-                <p class="product-description">
-                    Real power comes from the <span class="highlight">kinetic chain</span>:
-                    legs load, hips rotate, shoulder follows, and the
-                    <span class="highlight">wrist snap</span> arrives last, a split second
-                    before contact. This guide breaks the shot into the three phases coaches
-                    actually teach, with a drill for each.
-                </p>
-                <div class="action-buttons">
-                    <a href="guide-07.html" class="btn btn-primary">Read Full Guide</a>
-                    <button class="btn btn-secondary">Save for Later</button>
+<!-- FEATURED GUIDES SECTION -->
+    <div class="container featured-wrap mb-5" style="max-width: 1400px;">
+        <div class="section-label mb-4">Featured Guides</div>
+        
+        <div class="row g-5">
+            
+            <!-- Guide 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: 15px; overflow: hidden; background: #FFFFFF;">
+                    <img src="https://th.bing.com/th/id/OIP.d3U6xbTCnEmOMgTwuRZRxAHaLH?w=115&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" 
+                         class="card-img-top object-fit-cover" 
+                         alt="Player executing a jump smash" 
+                         style="height: 280px; object-position: top;">
+                         
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="eyebrow mb-2">Guide</div>
+                        <h2 class="product-title fs-4 mb-3">The Jump Smash: Timing, Power &amp; Placement</h2>
+                        <p class="product-description flex-grow-1">
+                            Real power comes from the <span class="highlight">kinetic chain</span>:
+                            legs load, hips rotate, shoulder follows, and the
+                            <span class="highlight">wrist snap</span> arrives last, a split second
+                            before contact. This guide breaks the shot into the three phases coaches
+                            actually teach, with a drill for each.
+                        </p>
+                        <div class="action-buttons mt-auto d-flex flex-column gap-2">
+                            <a href="techniques.html" class="btn btn-primary w-100">Read Full Guide</a>
+                            <button class="btn btn-secondary w-100">Save for Later</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Guide 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: 15px; overflow: hidden; background: #FFFFFF;">
+                    <img src="https://images.unsplash.com/photo-1611250282006-4484dd3fba6b?fm=jpg&q=70&w=500&auto=format&fit=crop" 
+                         class="card-img-top object-fit-cover" 
+                         alt="Close up of badminton shoes and footwork" 
+                         style="height: 280px; object-position: center;">
+                         
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="eyebrow mb-2">Guide</div>
+                        <h2 class="product-title fs-4 mb-3">The Split Step: Foundation of Court Movement</h2>
+                        <p class="product-description flex-grow-1">
+                            If you are constantly late to the shuttle, you aren't too slow—you're just missing your <span class="highlight">split step</span>. 
+                            A properly timed pre-load hop neutralizes your opponent's deception and sets up explosive, directional movement 
+                            to any corner of the court.
+                        </p>
+                        <div class="action-buttons mt-auto d-flex flex-column gap-2">
+                            <a href="techniques.html" class="btn btn-primary w-100">Read Full Guide</a>
+                            <button class="btn btn-secondary w-100">Save for Later</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guide 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-0 shadow-sm" style="border-radius: 15px; overflow: hidden; background: #FFFFFF;">
+                    <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?fm=jpg&q=70&w=500&auto=format&fit=crop" 
+                         class="card-img-top object-fit-cover" 
+                         alt="Badminton racket ready for a backhand stroke" 
+                         style="height: 280px; object-position: center;">
+                         
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="eyebrow mb-2">Guide</div>
+                        <h2 class="product-title fs-4 mb-3">The Backhand Clear: Technique Over Brute Force</h2>
+                        <p class="product-description flex-grow-1">
+                            Stop trying to muscle the shuttle. A baseline-to-baseline backhand relies on a relaxed grip and sharp 
+                            <span class="highlight">forearm supination</span>. Learn how to generate effortless repulsion and 
+                            recover instantly without straining your elbow.
+                        </p>
+                        <div class="action-buttons mt-auto d-flex flex-column gap-2">
+                            <a href="techniques.html" class="btn btn-primary w-100">Read Full Guide</a>
+                            <button class="btn btn-secondary w-100">Save for Later</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-
+   <!-- UPCOMING EVENTS SECTION (TABLE FORMAT) -->
+    <div class="container mb-5 pb-5 gc-wrap">
+        <div class="section-label mb-4">Upcoming Events</div>
+        
+        <!-- Table Wrapper with white background and rounded corners -->
+            <div class="table-responsive bg-white shadow-sm p-4 event-table-wrap">
+                <table class="table align-middle table-hover border-white mb-0">
+                    
+                    <!-- Table Header -->
+                    <thead class="event-table-head">
+                    <tr>
+                        <th scope="col" class="border-bottom pb-3 px-3">Date</th>
+                        <th scope="col" class="border-bottom pb-3 px-3">Event Details</th>
+                        <th scope="col" class="border-bottom pb-3 px-3">Location</th>
+                        <th scope="col" class="border-bottom pb-3 px-3">Time</th>
+                        <th scope="col" class="border-bottom pb-3 px-3 text-end">Action</th>
+                    </tr>
+                    </thead>
+                    
+                    <!-- Table Body -->
+                    <tbody class="event-table-body">
+                    
+                    <!-- Event Row 1 -->
+                    <tr>
+                        <td class="px-3 py-4 event-date">
+                        Aug 15, 2026
+                        </td>
+                        <td class="px-3 py-4">
+                        <div class="event-title">Community Session: Doubles &amp; Drills</div>
+                        <div class="event-desc">Casual weekend session starting with split-step drills.</div>
+                        </td>
+                        <td class="px-3 py-4 event-location">
+                        Nanyang Polytechnic<br>Sports Hall
+                        </td>
+                        <td class="px-3 py-4 event-time">
+                        2:00 PM - 5:00 PM
+                        </td>
+                        <td class="px-3 py-4 text-end">
+                        <a href="contact.html" class="btn btn-secondary event-btn">RSVP Now</a>
+                        </td>
+                    </tr>
+                    
+                    <!-- Event Row 2 -->
+                    <tr>
+                        <td class="px-3 py-4 event-date">Aug 23, 2026</td>
+                            <td class="px-3 py-4">
+                                <div class="event-title">Zephra Amateur Clash</div>
+                                <div class="event-desc">Monthly amateur tournament.</div>
+                            </td>
+                            <td class="px-3 py-4 event-location">Bishan ActiveSG<br>Sports Hall</td>
+                            <td class="px-3 py-4 event-time">9:00 AM - 6:00 PM</td>
+                            <td class="px-3 py-4 text-end">
+                            <a href="contact.html" class="btn btn-secondary event-btn">Register</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
     <!-- BOOTSTRAP 5 JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
