@@ -76,13 +76,13 @@
             All Guides
         </h4>
         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <button class="nav-link active" id="v-pills-smash-tab" data-bs-toggle="pill" data-bs-target="#v-pills-smash" type="button" role="tab" aria-selected="true">
+          <button class="nav-link active" id="v-pills-smash-tab" data-bs-toggle="pill" data-bs-target="#smash" type="button" role="tab" aria-selected="true">
             The Jump Smash
           </button>
-          <button class="nav-link" id="v-pills-split-tab" data-bs-toggle="pill" data-bs-target="#v-pills-split" type="button" role="tab" aria-selected="false">
+          <button class="nav-link" id="v-pills-split-tab" data-bs-toggle="pill" data-bs-target="#split" type="button" role="tab" aria-selected="false">
             The Split Step
           </button>
-          <button class="nav-link" id="v-pills-backhand-tab" data-bs-toggle="pill" data-bs-target="#v-pills-backhand" type="button" role="tab" aria-selected="false">
+          <button class="nav-link" id="v-pills-backhand-tab" data-bs-toggle="pill" data-bs-target="#backhand" type="button" role="tab" aria-selected="false">
             The Backhand Clear
           </button>
         </div>
@@ -93,20 +93,58 @@
         <div class="tab-content" id="v-pills-tabContent">
           
           <!-- TAB 1: JUMP SMASH -->
-          <div class="tab-pane fade show active" id="v-pills-smash" role="tabpanel" aria-labelledby="v-pills-smash-tab">
+          <div class="tab-pane fade show active" id="smash" role="tabpanel" aria-labelledby="v-pills-smash-tab">
             <h1 class="guide-content-title">The Jump Smash: Timing, Power &amp; Placement</h1>
             <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
                 Advanced &bull; 9 Min Read
             </p>
-            <img src="https://th.bing.com/th/id/OIP.d3U6xbTCnEmOMgTwuRZRxAHaLH?w=115&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" alt="Jump Smash" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover; object-position: top;">
+            <img src="smash.jpg" alt="Jump Smash" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover; object-position: top;">
             
             <h4>The Kinetic Chain</h4>
             <p>Real power comes from the kinetic chain: legs load, hips rotate, shoulder follows, and the wrist snap arrives last, a split second before contact. This guide breaks the shot into the three phases coaches actually teach, with a drill for each.</p>
-            <p><em>(Add your full paragraphs, videos, or diagrams for this guide here...)</em></p>
+            
+            <!-- EMBEDDED VIDEO -->
+            <div class="ratio ratio-16x9 mb-2">
+                <iframe src="https://www.youtube.com/embed/Seony5Owsb8" title="Learn The Jump Smash! Step-By-Step Badminton Tutorial" allowfullscreen></iframe>
+            </div>
+            <p class="text-muted text-center" style="font-size: 0.85rem;">
+            Video tutorial by <a href="https://www.youtube.com/watch?v=Seony5Owsb8" target="_blank" class="text-decoration-underline">Badminton Insight</a>.
+            </p>
+
+            <!-- ADDED TABLE SECTION -->
+            <h4 class="mt-4 mb-3">Jump Smash vs. Standard Smash Comparison</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle bg-white">
+                        <thead class="table-dark" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
+                        <tr>
+                            <th scope="col">Metric</th>
+                            <th scope="col">Jump Smash</th>
+                            <th scope="col">Standard Smash</th>
+                        </tr>
+                        </thead>
+                        <tbody style="font-size: 0.95rem;">
+                        <tr>
+                            <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Contact Height</th>
+                            <td>Higher (steeper downward angle)</td>
+                            <td>Standard / Lower angle</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Energy Expenditure</th>
+                            <td>High (requires explosive leg load)</td>
+                            <td>Moderate</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Best Used For</th>
+                            <td>Creating immediate winners or tight angles</td>
+                            <td>Sustained pressure and building rallies</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
           </div>
 
           <!-- TAB 2: SPLIT STEP -->
-          <div class="tab-pane fade" id="v-pills-split" role="tabpanel" aria-labelledby="v-pills-split-tab">
+          <div class="tab-pane fade" id="split" role="tabpanel" aria-labelledby="v-pills-split-tab">
             <h1 class="guide-content-title">The Split Step: Foundation of Court Movement</h1>
             <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
                 Fundamentals &bull; 6 Min Read
@@ -119,7 +157,7 @@
           </div>
 
           <!-- TAB 3: BACKHAND CLEAR -->
-          <div class="tab-pane fade" id="v-pills-backhand" role="tabpanel" aria-labelledby="v-pills-backhand-tab">
+          <div class="tab-pane fade" id="backhand" role="tabpanel" aria-labelledby="v-pills-backhand-tab">
             <h1 class="guide-content-title">The Backhand Clear: Technique Over Brute Force</h1>
             <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
                 Intermediate &bull; 7 Min Read
@@ -136,7 +174,25 @@
     </div>
   </div>
 
-  <!-- BOOTSTRAP 5 JAVASCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- SCRIPT TO HANDLE URL HASH NAVIGATION -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      function activateTabFromHash() {
+        if (window.location.hash) {
+          let hash = window.location.hash;
+          let targetTab = document.querySelector(`[data-bs-target="${hash}"]`);
+          if (targetTab) {
+            let tab = new bootstrap.Tab(targetTab);
+            tab.show();
+          }
+        }
+      }
+
+      activateTabFromHash();
+      window.addEventListener("hashchange", activateTabFromHash);
+    });
+  </script>
 </body>
 </html>
