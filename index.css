@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. GLOBAL RESET & BASE STYLES
-   ========================================================================== */
+/*1.BASE STYLES*/
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +14,7 @@ html body {
     padding-top: 80px;
 }
 
-/* ==========================================================================
-   2. BUTTONS
-   ========================================================================== */
+/*2. BUTTONS */
 html body .btn {
     padding: 15px 30px;
     border: none;
@@ -73,9 +69,7 @@ html body .btn-text:hover {
     border-color: #954726; 
 }
 
-/* ==========================================================================
-   3. HERO SECTION
-   ========================================================================== */
+/*3. HERO SECTION*/
 .hero {
     width: 100%;
 }
@@ -107,7 +101,6 @@ html body .hero-title {
     margin-bottom: 30px;
 }
 
-/* Image container layout (replaces grid to fix horizontal compression) */
 .hero-images {
     width: 100%;
     display: flex;
@@ -132,9 +125,7 @@ html body .hero-title {
     height: 420px;
 }
 
-/* ==========================================================================
-   4. BANNER SECTION
-   ========================================================================== */
+/*4. BANNER SECTION */
 .banner {
     position: relative;
     width: 100%;
@@ -196,9 +187,7 @@ html body .banner-caption a {
     text-decoration: none;
 }
 
-/* ==========================================================================
-   5. FEATURED GUIDE SECTION
-   ========================================================================== */
+/*5. FEATURED GUIDE SECTION */
 .featured-wrap {
     max-width: 1000px;
     margin: 70px auto 90px;
@@ -222,7 +211,7 @@ html body .section-label {
     box-shadow: 0 10px 30px rgba(22, 56, 44, 0.1);
     overflow: hidden;
     display: grid;
-    grid-template-columns: 320px 1fr; /* Fixed left image box, fluid text area */
+    grid-template-columns: 320px 1fr; 
     position: relative;
     width: 100%;
 }
@@ -314,7 +303,7 @@ html body .meta-line {
     padding-right: 14px;
     margin-right: 14px;
     border-right: 1px solid #DCD7C7;
-    white-space: nowrap; /* Prevents text like "6 MIN READ" from wrapping vertically */
+    white-space: nowrap; 
 }
 
 .meta-line span:last-child { 
@@ -327,10 +316,62 @@ html body .meta-line {
     display: flex; 
     gap: 20px; 
 }
+/*8. UPCOMING EVENTS TABLE */
+.event-table-wrap {
+    border-radius: 15px;
+}
 
-/* ==========================================================================
-   6. RESPONSIVE BREAKPOINTS
-   ========================================================================== */
+.event-table-head {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: #5a7066;
+    text-transform: uppercase;
+}
+
+.event-table-body {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #495057;
+}
+
+.event-table-body tr:not(:first-child) td {
+    border-top: 1px solid #f0f0f0;
+}
+
+.event-date {
+    font-weight: 600;
+    color: #1a362d;
+    white-space: nowrap;
+}
+
+.event-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a362d;
+    margin-bottom: 4px;
+}
+
+.event-desc {
+    font-size: 0.95rem;
+}
+
+.event-location {
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.event-time {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.event-btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+}
+/*6. RESPONSIVE */
 @media (max-width: 860px) {
     html body .hero-title { 
         font-size: 34px; 
