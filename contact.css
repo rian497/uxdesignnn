@@ -10,6 +10,8 @@ body {
     color: #1D2620;
     min-height: 100vh;
     padding-top: 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ---------- CONTACT: PAGE TITLE ---------- */
@@ -120,6 +122,12 @@ body {
     background: #EAF1EC;
     color: #16382C;
     border-left: 3px solid #2F5C46;
+}
+
+/* ---------- STICKY FOOTER ---------- */
+
+.site-footer {
+    margin-top: auto;
 }
 
 /* ---------- RESPONSIVE ---------- */
