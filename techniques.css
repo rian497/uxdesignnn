@@ -1,0 +1,40 @@
+/* ==========================================================================
+   ZEPHRA - TECHNIQUES & GUIDES STYLES
+   ========================================================================== */
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+/* Nav Pills Sidebar */
+.nav-pills .nav-link {
+    color: #495057;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #1a362d;
+    color: #ffffff;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    background-color: #e9ecef;
+}
+
+/* Guide Typography */
+.guide-content-title {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1a362d;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 700;
+}
