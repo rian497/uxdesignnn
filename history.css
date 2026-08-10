@@ -378,6 +378,14 @@ body {
     box-shadow: 0 10px 30px rgba(22, 56, 44, 0.12);
     display: block;
 }
+/* Section Divider Line */
+.section-divider {
+    border: none;
+    border-top: 1px solid #DCD7C7;
+    max-width: 1100px;             
+    margin: 60px auto;              
+    opacity: 0.8;
+}
 
 /* ---------- HISTORY: FEATURE BOXES ---------- */
 
