@@ -14,229 +14,39 @@
     <!-- Bootstrap & Stylesheets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="common.css" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            line-height: 1.6;
-            background: #F3F0E7;
-            color: #1D2620;
-            min-height: 100vh;
-            padding-top: 100px;
-        }
-
-        /* PAGE TITLE */
-        .page-title-wrap {
-            text-align: center;
-        }
-
-        .page-title {
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-weight: 600;
-            font-size: 46px;
-            color: #16382C;
-            margin-bottom: 10px;
-        }
-
-        .page-subtitle {
-            font-size: 16px;
-            color: #5B6259;
-            max-width: 520px;
-            margin: 0 auto;
-        }
-
-        /* SECTION HEADERS */
-        .section-header {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            margin-bottom: 24px;
-            border-bottom: 1px solid #DCD7C7;
-            padding-bottom: 14px;
-        }
-
-        .section-title {
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-weight: 600;
-            font-size: 26px;
-            color: #16382C;
-        }
-
-        .section-count {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            color: #5B6259;
-        }
-
-        /* GUIDE CARDS */
-        .guide-card {
-            background: #FFFFFF;
-            border: 1px solid #DCD7C7;
-            border-radius: 12px;
-            overflow: hidden;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .guide-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 28px rgba(22, 56, 44, 0.08);
-        }
-
-        .guide-media {
-            position: relative;
-            height: 200px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .guide-media img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .guide-level {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            background: rgba(22, 56, 44, 0.85);
-            border: 1px solid rgba(243, 240, 231, 0.3);
-            color: #F3F0E7;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 4px 10px;
-            border-radius: 20px;
-        }
-
-        .save-toggle {
-            position: absolute;
-            top: 12px;
-            right: 14px;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.85);
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 16px;
-            transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        .save-toggle:hover {
-            transform: scale(1.1);
-            background: #FFFFFF;
-        }
-
-        .save-toggle.is-saved {
-            color: #BE5B33;
-        }
-
-        .save-toggle:not(.is-saved) {
-            color: #A8A392;
-        }
-
-        .guide-body {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .guide-eyebrow {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #2F5C46;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .guide-title {
-            font-family: 'Fraunces', serif;
-            font-size: 22px;
-            line-height: 1.25;
-            color: #16382C;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .guide-excerpt {
-            font-size: 14.5px;
-            line-height: 1.6;
-            color: #5B6259;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .guide-meta {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            text-transform: uppercase;
-            color: #8C887B;
-            border-top: 1px solid #FAF8F5;
-            padding-top: 12px;
-        }
-
-        .guide-meta span:not(:last-child)::after {
-            content: '•';
-            margin-left: 10px;
-        }
-
-        /* EMPTY STATE */
-        .empty-state {
-            text-align: center;
-            padding: 50px 20px;
-            color: #8A8577;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 13px;
-        }
-
-        @media (max-width: 768px) {
-            .page-title {
-                font-size: 34px;
-            }
-        }
-    </style>
+    <link href="saved.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- FIXED NAVBAR -->
-    <header class="navbar fixed-top">
-        <div class="nav-wrap">
+    <header class="navbar navbar-expand-md fixed-top bg-white border-bottom">
+        <div class="container-fluid max-width-1200 px-3 px-md-4">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="nav-brand fw-bold text-decoration-none">Zephra</a>
 
-            <nav class="nav-left">
-                <a href="index.html" class="nav-item">Home</a>
-                <a href="history.html" class="nav-item">History</a>
-                <a href="feedback.html" class="nav-item">Feedback</a>
-                <a href="contact.html" class="nav-item">Contact</a>
+            <!-- Hamburger Toggle Button (Hidden on desktop, visible on phone) -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#zephraNavbar" aria-controls="zephraNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible Navigation Links -->
+            <div class="collapse navbar-collapse mt-3 mt-md-0" id="zephraNavbar">
+            
+            <!-- Left Links -->
+            <nav class="nav-left navbar-nav me-auto mb-2 mb-md-0 d-flex gap-md-3">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="history.html" class="nav-item nav-link">History</a>
+                <a href="feedback.html" class="nav-item nav-link">Feedback</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
             </nav>
 
-            <a href="index.html" class="nav-brand">Zephra</a>
+            <!-- Right Links & Search -->
+            <div class="nav-right navbar-nav align-items-md-center gap-2 gap-md-3">
+                <a href="signin.html" class="nav-item nav-link">Sign In</a>
+                <a href="saved.html" class="nav-item nav-link">Saved</a>
+            </div>
 
-            <div class="nav-right">
-                <div class="search-box">
-                    <input type="text" class="search-input" placeholder="Search guides...">
-                    <div class="search-btn"></div>
-                </div>
-                <a href="signin.html" class="nav-item">Sign In</a>
-                <a href="saved.html" class="nav-item active">Saved</a>
             </div>
 
         </div>
@@ -249,7 +59,7 @@
     </div>
 
     <!-- SAVED GUIDES -->
-    <div class="container pb-4">
+    <div class="container pb-5">
         <div class="section-header">
             <span class="section-title">Saved</span>
             <span class="section-count" id="savedCount">3 guides</span>
@@ -259,18 +69,39 @@
             <div class="col-lg-4 col-md-6">
                 <div class="guide-card">
                     <div class="guide-media">
-                        <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Player demonstrating a badminton grip">
-                        <span class="guide-level">Beginner</span>
-                        <button class="save-toggle is-saved" data-title="The Correct Grip">♥</button>
+                        <img src="smash.jpg" alt="Player executing a jump smash">
+                        <span class="guide-level">Advanced</span>
+                        <button class="save-toggle is-saved" data-title="The Jump Smash">♥</button>
                     </div>
                     <div class="guide-body">
-                        <div class="guide-eyebrow">Fundamentals</div>
-                        <div class="guide-title">The Correct Grip, Broken Down</div>
-                        <p class="guide-excerpt">Why most players hold the racket wrong, and the two-second check that fixes it.</p>
+                        <div class="guide-eyebrow">Guide</div>
+                        <div class="guide-title">The Jump Smash: Timing, Power &amp; Placement</div>
+                        <p class="guide-excerpt">Real power comes from the kinetic chain — legs, hips, shoulder, and a wrist snap that arrives last.</p>
                         <div class="guide-meta">
-                            <span>6 min read</span>
+                            <span>Attack</span>
+                            <span>Shot Selection</span>
+                        </div>
+                        <a href="techniques.html#smash" class="btn btn-primary w-100 mt-3">Read Full Guide</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="guide-card">
+                    <div class="guide-media">
+                        <img src="split.jpg" alt="Close up of badminton shoes and footwork">
+                        <span class="guide-level">Beginner</span>
+                        <button class="save-toggle is-saved" data-title="The Split Step">♥</button>
+                    </div>
+                    <div class="guide-body">
+                        <div class="guide-eyebrow">Guide</div>
+                        <div class="guide-title">The Split Step: Foundation of Court Movement</div>
+                        <p class="guide-excerpt">A properly timed pre-load hop that sets up explosive movement to any corner of the court.</p>
+                        <div class="guide-meta">
+                            <span>Fundamentals</span>
                             <span>Footwork &amp; Grip</span>
                         </div>
+                        <a href="techniques.html#split" class="btn btn-primary w-100 mt-3">Read Full Guide</a>
                     </div>
                 </div>
             </div>
@@ -278,37 +109,19 @@
             <div class="col-lg-4 col-md-6">
                 <div class="guide-card">
                     <div class="guide-media">
-                        <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Player mid-jump smash">
-                        <span class="guide-level">Advanced</span>
-                        <button class="save-toggle is-saved" data-title="Jump Smash Timing">♥</button>
-                    </div>
-                    <div class="guide-body">
-                        <div class="guide-eyebrow">Attack</div>
-                        <div class="guide-title">Jump Smash: Getting the Timing Right</div>
-                        <p class="guide-excerpt">A phase-by-phase drill for the jump smash, from load-up to landing.</p>
-                        <div class="guide-meta">
-                            <span>9 min read</span>
-                            <span>Shot Selection</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="guide-card">
-                    <div class="guide-media">
-                        <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Player at the net">
+                        <img src="serve.jpg" alt="Badminton racket ready for a backhand stroke">
                         <span class="guide-level">Intermediate</span>
-                        <button class="save-toggle is-saved" data-title="Net Play Basics">♥</button>
+                        <button class="save-toggle is-saved" data-title="The Low Serve">♥</button>
                     </div>
                     <div class="guide-body">
-                        <div class="guide-eyebrow">Net Play</div>
-                        <div class="guide-title">Reading the Net: When to Push vs. Lift</div>
-                        <p class="guide-excerpt">The split-second read that decides whether you push tight or lift deep.</p>
+                        <div class="guide-eyebrow">Guide</div>
+                        <div class="guide-title">The Low Serve: Precision, Control &amp; Net Clearance</div>
+                        <p class="guide-excerpt">A sharp low serve skims the tape and forces your opponent to lift, giving you rally control.</p>
                         <div class="guide-meta">
-                            <span>7 min read</span>
+                            <span>Serve</span>
                             <span>Shot Selection</span>
                         </div>
+                        <a href="techniques.html#serve" class="btn btn-primary w-100 mt-3">Read Full Guide</a>
                     </div>
                 </div>
             </div>
@@ -319,96 +132,7 @@
         </div>
     </div>
 
-    <!-- RECOMMENDED -->
-    <div class="container pb-5">
-        <div class="section-header">
-            <span class="section-title">Featured</span>
-            <span class="section-count">Based on your saves</span>
-        </div>
-        <div class="row g-4">
-
-            <div class="col-lg-4 col-md-6">
-                <div class="guide-card">
-                    <div class="guide-media">
-                        <img src="https://images.unsplash.com/photo-1613918431703-aa50889fbd2e?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Player performing footwork drill">
-                        <span class="guide-level">Beginner</span>
-                        <button class="save-toggle" data-title="Split-Step Footwork">♥</button>
-                    </div>
-                    <div class="guide-body">
-                        <div class="guide-eyebrow">Fundamentals</div>
-                        <div class="guide-title">The Split-Step: Your First 100ms</div>
-                        <p class="guide-excerpt">Pairs well with your saved grip guide — footwork starts before the shuttle's hit.</p>
-                        <div class="guide-meta">
-                            <span>5 min read</span>
-                            <span>Footwork &amp; Grip</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="guide-card">
-                    <div class="guide-media">
-                        <img src="https://images.unsplash.com/photo-1614743879967-fc2e3a4c85e7?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Player serving">
-                        <span class="guide-level">Intermediate</span>
-                        <button class="save-toggle" data-title="Deceptive Serves">♥</button>
-                    </div>
-                    <div class="guide-body">
-                        <div class="guide-eyebrow">Serve</div>
-                        <div class="guide-title">Building a Deceptive Serve</div>
-                        <p class="guide-excerpt">Players who saved "Net Play Basics" also read this one next.</p>
-                        <div class="guide-meta">
-                            <span>8 min read</span>
-                            <span>Serve</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="guide-card">
-                    <div class="guide-media">
-                        <img src="https://images.unsplash.com/photo-1626224583500-9b0c5c9e3f0a?fm=jpg&q=70&w=800&auto=format&fit=crop" alt="Two players in a doubles rally">
-                        <span class="guide-level">Advanced</span>
-                        <button class="save-toggle" data-title="Doubles Court Coverage">♥</button>
-                    </div>
-                    <div class="guide-body">
-                        <div class="guide-eyebrow">Doubles</div>
-                        <div class="guide-title">Court Coverage Patterns for Doubles</div>
-                        <p class="guide-excerpt">A natural next step after "Jump Smash Timing" — attack needs coverage behind it.</p>
-                        <div class="guide-meta">
-                            <span>10 min read</span>
-                            <span>Shot Selection</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const savedGrid = document.getElementById('savedGrid');
-        const savedCount = document.getElementById('savedCount');
-        const emptyState = document.getElementById('emptyState');
-
-        function updateSavedCount() {
-            const count = savedGrid.querySelectorAll('.save-toggle.is-saved').length;
-            savedCount.textContent = count + (count === 1 ? ' guide' : ' guides');
-            emptyState.style.display = count === 0 ? 'block' : 'none';
-        }
-
-        document.querySelectorAll('.save-toggle').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                btn.classList.toggle('is-saved');
-                if (savedGrid.contains(btn)) {
-                    updateSavedCount();
-                }
-            });
-        });
-
-        updateSavedCount();
-    </script>
+    <script src="saved.js"></script>
 </body>
 </html>
