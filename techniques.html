@@ -1,302 +1,304 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guides &amp; Techniques — ZEPHRA</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guides &amp; Techniques — ZEPHRA</title>
 
-  <!-- BOOTSTRAP 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- BOOTSTRAP 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-  <!-- YOUR CUSTOM CSS -->
-  <link rel="stylesheet" href="common.css" />
-  <link rel="stylesheet" href="index.css" />
-  <link rel="stylesheet" href="techniques.css" />
+    <!-- YOUR CUSTOM CSS -->
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="techniques.css" />
 </head>
 
 <body>
-  <!-- NAVBAR -->
-  <header class="navbar navbar-expand-md fixed-top bg-white border-bottom">
-        <div class="container-fluid max-width-1200 px-3 px-md-4">
-            
-            <!-- Brand Logo -->
-            <a href="index.html" class="nav-brand fw-bold text-decoration-none">Zephra</a>
+	<!-- NAVBAR -->
+	<header class="navbar navbar-expand-md fixed-top bg-white border-bottom">
+		<div class="container-fluid max-width-1200 px-3 px-md-4">
 
-            <!-- Hamburger Toggle Button (Hidden on desktop, visible on phone) -->
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#zephraNavbar" aria-controls="zephraNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+			<!-- Brand Logo -->
+			<a href="index.html" class="nav-brand fw-bold text-decoration-none">Zephra</a>
 
-            <!-- Collapsible Navigation Links -->
-            <div class="collapse navbar-collapse mt-3 mt-md-0" id="zephraNavbar">
-            
-            <!-- Left Links -->
-            <nav class="nav-left navbar-nav me-auto mb-2 mb-md-0 d-flex gap-md-3">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="history.html" class="nav-item nav-link">History</a>
-                <a href="feedback.html" class="nav-item nav-link">Feedback</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </nav>
+			<!-- Hamburger Toggle Button (Hidden on desktop, visible on phone) -->
+			<button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#zephraNavbar" aria-controls="zephraNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-            <!-- Right Links & Search -->
-            <div class="nav-right navbar-nav align-items-md-center gap-2 gap-md-3">
-                <a href="signin.html" class="nav-item nav-link">Sign In</a>
-                <a href="saved.html" class="nav-item nav-link">Saved</a>
-            </div>
+			<!-- Collapsible Navigation Links -->
+			<div class="collapse navbar-collapse mt-3 mt-md-0" id="zephraNavbar">
 
-            </div>
+				<!-- Left Links -->
+				<nav class="nav-left navbar-nav me-auto mb-2 mb-md-0 d-flex gap-md-3">
+					<a href="index.html" class="nav-item nav-link">Home</a>
+					<a href="history.html" class="nav-item nav-link">History</a>
+					<a href="techniques.html" class="nav-item nav-link">Guides</a>
+					<a href="feedback.html" class="nav-item nav-link">Feedback</a>
+					<a href="contact.html" class="nav-item nav-link">Contact</a>
+				</nav>
 
-        </div>
-    </header>
+				<!-- Right Links & Search -->
+				<div class="nav-right navbar-nav align-items-md-center gap-2 gap-md-3">
+					<a href="signin.html" class="nav-item nav-link">Sign In</a>
+					<a href="saved.html" class="nav-item nav-link">Saved</a>
+				</div>
 
-  <!-- MAIN GUIDES SECTION -->
-  <div class="container" style="margin-top: 120px; margin-bottom: 80px; max-width: 1200px;">
-    
-    <div class="row">
-      <!-- SIDEBAR TABS -->
-      <div class="col-md-4 col-lg-3 mb-4">
-        <h4 class="mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; text-transform: uppercase; color: #5a7066;">
-            All Guides
-        </h4>
-        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <button class="nav-link active" id="v-pills-smash-tab" data-bs-toggle="pill" data-bs-target="#smash" type="button" role="tab" aria-selected="true">
-            The Jump Smash
-          </button>
-          <button class="nav-link" id="v-pills-split-tab" data-bs-toggle="pill" data-bs-target="#split" type="button" role="tab" aria-selected="false">
-            The Split Step
-          </button>
-          <button class="nav-link" id="v-pills-serve-tab" data-bs-toggle="pill" data-bs-target="#serve" type="button" role="tab" aria-selected="false">
-            The Low Serve
-          </button>
-        </div>
-      </div>
+			</div>
 
-      <!-- CONTENT AREA -->
-      <div class="col-md-8 col-lg-9 bg-white p-5 shadow-sm" style="border-radius: 15px;">
-        <div class="tab-content" id="v-pills-tabContent">
-          
-          <!-- TAB 1: JUMP SMASH -->
-          <div class="tab-pane fade show active" id="smash" role="tabpanel" aria-labelledby="v-pills-smash-tab">
-            <h1 class="guide-content-title">The Jump Smash: Timing, Power &amp; Placement</h1>
-            <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
-                Advanced &bull; 9 Min Read
-            </p>
-            <img src="smash.jpg" alt="Jump Smash" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover; object-position: top;">
-            
-            <h4>The Kinetic Chain</h4>
-            <p>Real power comes from the kinetic chain: legs load, hips rotate, shoulder follows, and the wrist snap arrives last, a split second before contact. This guide breaks the shot into the three phases coaches actually teach, with a drill for each.</p>
-            
-            <!-- EMBEDDED VIDEO -->
-            <div class="ratio ratio-16x9 mb-2">
-              <iframe 
-                src="https://www.youtube.com/embed/Seony5Owsb8" 
-                title="Learn The Jump Smash! Step-By-Step Badminton Tutorial" 
-                allowfullscreen>
-              </iframe>
-            </div>
-            <p class="text-muted text-center mb-4" style="font-size: 0.85rem;">
-              Video tutorial by <a href="https://www.youtube.com/watch?v=Seony5Owsb8" target="_blank" class="text-decoration-underline">Badminton Insight</a>.
-            </p>
+		</div>
+	</header>
 
-            <!-- TABLE SECTION -->
-            <h4 class="mt-4 mb-3">Jump Smash vs. Standard Smash Comparison</h4>
-            <div class="table-responsive mb-4">
-              <table class="table table-bordered align-middle bg-white">
-                <thead class="table-dark" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
-                  <tr>
-                    <th scope="col">Metric</th>
-                    <th scope="col">Jump Smash</th>
-                    <th scope="col">Standard Smash</th>
-                  </tr>
-                </thead>
-                <tbody style="font-size: 0.95rem;">
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Contact Height</th>
-                    <td>Higher (steeper downward angle)</td>
-                    <td>Standard / Lower angle</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Energy Expenditure</th>
-                    <td>High (requires explosive leg load)</td>
-                    <td>Moderate</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Best Used For</th>
-                    <td>Creating immediate winners or tight angles</td>
-                    <td>Sustained pressure and building rallies</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+	<!-- MAIN GUIDES SECTION -->
+	<div class="container" style="margin-top: 120px; margin-bottom: 80px; max-width: 1200px;">
 
-            <!-- TEXT-ONLY PRACTICE CUES -->
-            <div class="p-4 border rounded-3 bg-light mt-4">
-              <h5 class="fw-bold mb-3" style="color: #1a362d;">🎯 Pro Tips</h5>
-              <ul class="mb-0 ps-3">
-                <li class="mb-2">Maintain a loose grip until the exact millisecond of impact.</li>
-                <li class="mb-2">Jump slightly forward into the shuttle to transfer momentum.</li>
-                <li>Contact shuttle roughly 0.5m in front of your body at full stretch.</li>
-              </ul>
-            </div>
+		<div class="row">
+			<!-- SIDEBAR TABS -->
+			<div class="col-md-4 col-lg-3 mb-4">
+				<h4 class="mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 1rem; text-transform: uppercase; color: #5a7066;">
+					All Guides
+				</h4>
+				<div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<button class="nav-link active" id="v-pills-smash-tab" data-bs-toggle="pill" data-bs-target="#smash" type="button" role="tab" aria-selected="true">
+						The Jump Smash
+					</button>
+					<button class="nav-link" id="v-pills-split-tab" data-bs-toggle="pill" data-bs-target="#split" type="button" role="tab" aria-selected="false">
+						The Split Step
+					</button>
+					<button class="nav-link" id="v-pills-serve-tab" data-bs-toggle="pill" data-bs-target="#serve" type="button" role="tab" aria-selected="false">
+						The Low Serve
+					</button>
+				</div>
+			</div>
 
-          </div>
+			<!-- CONTENT AREA -->
+			<div class="col-md-8 col-lg-9 bg-white p-5 shadow-sm" style="border-radius: 15px;">
+				<div class="tab-content" id="v-pills-tabContent">
 
-          <!-- TAB 2: SPLIT STEP -->
-          <div class="tab-pane fade" id="split" role="tabpanel" aria-labelledby="v-pills-split-tab">
-            <h1 class="guide-content-title">The Split Step: Foundation of Court Movement</h1>
-            <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
-                Fundamentals &bull; 6 Min Read
-            </p>
-            <img src="split.jpg" alt="Footwork" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover;">
-            
-            <h4>Neutralizing Deception</h4>
-            <p>If you are constantly late to the shuttle, you aren't too slow—you're just missing your split step. A properly timed pre-load hop neutralizes your opponent's deception and sets up explosive, directional movement to any corner of the court.</p>
+					<!-- TAB 1: JUMP SMASH -->
+					<div class="tab-pane fade show active" id="smash" role="tabpanel" aria-labelledby="v-pills-smash-tab">
+						<h1 class="guide-content-title">The Jump Smash: Timing, Power &amp; Placement</h1>
+						<p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
+							Advanced &bull; 9 Min Read
+						</p>
+						<img src="smash.jpg" alt="Jump Smash" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover; object-position: top;">
 
-            <!-- EMBEDDED VIDEO -->
-            <div class="ratio ratio-16x9 mb-2">
-              <iframe 
-                src="https://www.youtube.com/embed/gy4YZS5tGxE" 
-                title="Badminton Footwork - The Split Step" 
-                allowfullscreen>
-              </iframe>
-            </div>
-            <p class="text-muted text-center mb-4" style="font-size: 0.85rem;">
-              Video tutorial by <a href="https://www.youtube.com/watch?v=gy4YZS5tGxE" target="_blank" class="text-decoration-underline">Badminton Insight</a>.
-            </p>
+						<h4>The Kinetic Chain</h4>
+						<p>Real power comes from the kinetic chain: legs load, hips rotate, shoulder follows, and the wrist snap arrives last, a split second before contact. This guide breaks the shot into the three phases coaches actually teach, with a drill for each.</p>
 
-            <!-- TABLE SECTION -->
-            <h4 class="mt-4 mb-3">Split Step vs. Standing Still Comparison</h4>
-            <div class="table-responsive mb-4">
-              <table class="table table-bordered align-middle bg-white">
-                <thead class="table-dark" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
-                  <tr>
-                    <th scope="col">Factor</th>
-                    <th scope="col">With Split Step</th>
-                    <th scope="col">Without Split Step (Flat Footed)</th>
-                  </tr>
-                </thead>
-                <tbody style="font-size: 0.95rem;">
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Reaction Time</th>
-                    <td>Explosive initiation upon shuttle contact</td>
-                    <td>Delayed response; body must break inertia</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Directional Change</th>
-                    <td>Seamless push off in any corner of the court</td>
-                    <td>Clunky weight transfer, prone to deception</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Body Mechanics</th>
-                    <td>Pre-loaded legs with low center of gravity</td>
-                    <td>Straight legs with high center of gravity</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+						<!-- EMBEDDED VIDEO -->
+						<div class="ratio ratio-16x9 mb-2">
+							<iframe
+								src="https://www.youtube.com/embed/Seony5Owsb8"
+								title="Learn The Jump Smash! Step-By-Step Badminton Tutorial"
+								allowfullscreen>
+							</iframe>
+						</div>
+						<p class="text-muted text-center mb-4" style="font-size: 0.85rem;">
+							Video tutorial by <a href="https://www.youtube.com/watch?v=Seony5Owsb8" target="_blank" class="text-decoration-underline">Badminton Insight</a>.
+						</p>
 
-            <!-- TEXT-ONLY PRACTICE CUES -->
-            <div class="p-4 border rounded-3 bg-light mt-4">
-              <h5 class="fw-bold mb-3" style="color: #1a362d;">🎯 Pro Tips</h5>
-              <ul class="mb-0 ps-3">
-                <li class="mb-2">Perform a quick drop, keeping knees bent and legs loaded.</li>
-                <li class="mb-2">Time the drop just as your opponent is about to strike the shuttle.</li>
-                <li>Keep body weight leaning forward on the balls of your feet.</li>
-              </ul>
-            </div>
-          </div>
+						<!-- TABLE SECTION -->
+						<h4 class="mt-4 mb-3">Jump Smash vs. Standard Smash Comparison</h4>
+						<div class="table-responsive mb-4">
+							<table class="table table-bordered align-middle bg-white">
+								<thead class="table-dark" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
+									<tr>
+										<th scope="col">Metric</th>
+										<th scope="col">Jump Smash</th>
+										<th scope="col">Standard Smash</th>
+									</tr>
+								</thead>
+								<tbody style="font-size: 0.95rem;">
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Contact Height</th>
+										<td>Higher (steeper downward angle)</td>
+										<td>Standard / Lower angle</td>
+									</tr>
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Energy Expenditure</th>
+										<td>High (requires explosive leg load)</td>
+										<td>Moderate</td>
+									</tr>
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Best Used For</th>
+										<td>Creating immediate winners or tight angles</td>
+										<td>Sustained pressure and building rallies</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 
-          <!-- TAB 3: LOW SERVE -->
-          <div class="tab-pane fade" id="serve" role="tabpanel" aria-labelledby="v-pills-serve-tab">
-            <h1 class="guide-content-title">The Low Serve: Precision, Control &amp; Net Clearance</h1>
-            <p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
-                Fundamentals &bull; 5 Min Read
-            </p>
-            <img src="serve.jpg" alt="Badminton Service" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover;">
-            
-            <h4>Mastering Net Clearance</h4>
-            <p>The serve is the only shot in badminton where you have total control. A sharp low serve skims the tape, preventing your opponent from attacking early and forcing them to lift, giving your team immediate control of the rally.</p>
+						<!-- TEXT-ONLY PRACTICE CUES -->
+						<div class="p-4 border rounded-3 bg-light mt-4">
+							<h5 class="fw-bold mb-3" style="color: #1a362d;">🎯 Pro Tips</h5>
+							<ul class="mb-0 ps-3">
+								<li class="mb-2">Maintain a loose grip until the exact millisecond of impact.</li>
+								<li class="mb-2">Jump slightly forward into the shuttle to transfer momentum.</li>
+								<li>Contact shuttle roughly 0.5m in front of your body at full stretch.</li>
+							</ul>
+						</div>
 
-            <!-- EMBEDDED VIDEO -->
-            <div class="ratio ratio-16x9 mb-2">
-              <iframe 
-                src="https://www.youtube.com/embed/ZlPxYx7VRGA" 
-                title="Backhand Serve Like A PRO - Step-By-Step Tutorial!" 
-                allowfullscreen>
-              </iframe>
-            </div>
-            <p class="text-muted text-center mb-4" style="font-size: 0.85rem;">
-              Video tutorial by <a href="https://www.youtube.com/watch?v=ZlPxYx7VRGA" target="_blank" class="text-decoration-underline">Badminton Insight</a>.
-            </p>
+					</div>
 
-            <!-- TABLE SECTION -->
-            <h4 class="mt-4 mb-3">Low Serve vs. High Serve Comparison</h4>
-            <div class="table-responsive mb-4">
-              <table class="table table-bordered align-middle bg-white">
-                <thead class="table-dark" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
-                  <tr>
-                    <th scope="col">Factor</th>
-                    <th scope="col">Low Serve</th>
-                    <th scope="col">High / Flick Serve</th>
-                  </tr>
-                </thead>
-                <tbody style="font-size: 0.95rem;">
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Trajectory</th>
-                    <td>Flat, tight over the net tape into front court</td>
-                    <td>High arc reaching the baseline rear court</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Primary Purpose</th>
-                    <td>Prevents opponent attack; forces an upward lift</td>
-                    <td>Pushes opponent back; creates time and space</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Primary Discipline</th>
-                    <td>Essential in Doubles &amp; competitive Singles</td>
-                    <td>Primarily used in Singles &amp; tactical variation</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+					<!-- TAB 2: SPLIT STEP -->
+					<div class="tab-pane fade" id="split" role="tabpanel" aria-labelledby="v-pills-split-tab">
+						<h1 class="guide-content-title">The Split Step: Foundation of Court Movement</h1>
+						<p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
+							Fundamentals &bull; 6 Min Read
+						</p>
+						<img src="split.jpg" alt="Footwork" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover;">
 
-            <!-- TEXT-ONLY PRACTICE CUES -->
-            <div class="p-4 border rounded-3 bg-light mt-4">
-              <h5 class="fw-bold mb-3" style="color: #1a362d;">🎯 Pro Tips</h5>
-              <ul class="mb-0 ps-3">
-                <li class="mb-2">Hold the racket high up on the grip for maximum control.</li>
-                <li class="mb-2">Pinch shuttle feathers at a 45-degree angle close to the strings.</li>
-                <li>Use a compact, smooth forearm push without rushing your backswing.</li>
-              </ul>
-            </div>
-          </div>
+						<h4>Neutralizing Deception</h4>
+						<p>If you are constantly late to the shuttle, you aren't too slow—you're just missing your split step. A properly timed pre-load hop neutralizes your opponent's deception and sets up explosive, directional movement to any corner of the court.</p>
 
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer class="site-footer">
-        <div class="container text-center py-4">
-            <a href="index.html" class="footer-brand">Zephra</a>
-            
-            <div class="footer-links d-flex justify-content-center gap-4 my-3">
-                <a href="index.html">Home</a>
-                <a href="history.html">History</a>
-                <a href="feedback.html">Feedback</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            
-            <hr class="footer-divider mx-auto my-3" />
-            
-            <p class="footer-copy mb-0">&copy; 2026 ZEPHRA. Built by Rian & Wen Rui. All rights reserved.</p>
-        </div>
-    </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="techniques.js"></script>
+						<!-- EMBEDDED VIDEO -->
+						<div class="ratio ratio-16x9 mb-2">
+							<iframe
+								src="https://www.youtube.com/embed/gy4YZS5tGxE"
+								title="Badminton Footwork - The Split Step"
+								allowfullscreen>
+							</iframe>
+						</div>
+						<p class="text-muted text-center mb-4" style="font-size: 0.85rem;">
+							Video tutorial by <a href="https://www.youtube.com/watch?v=gy4YZS5tGxE" target="_blank" class="text-decoration-underline">Badminton Insight</a>.
+						</p>
+
+						<!-- TABLE SECTION -->
+						<h4 class="mt-4 mb-3">Split Step vs. Standing Still Comparison</h4>
+						<div class="table-responsive mb-4">
+							<table class="table table-bordered align-middle bg-white">
+								<thead class="table-dark" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
+									<tr>
+										<th scope="col">Factor</th>
+										<th scope="col">With Split Step</th>
+										<th scope="col">Without Split Step (Flat Footed)</th>
+									</tr>
+								</thead>
+								<tbody style="font-size: 0.95rem;">
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Reaction Time</th>
+										<td>Explosive initiation upon shuttle contact</td>
+										<td>Delayed response; body must break inertia</td>
+									</tr>
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Directional Change</th>
+										<td>Seamless push off in any corner of the court</td>
+										<td>Clunky weight transfer, prone to deception</td>
+									</tr>
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Body Mechanics</th>
+										<td>Pre-loaded legs with low center of gravity</td>
+										<td>Straight legs with high center of gravity</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- TEXT-ONLY PRACTICE CUES -->
+						<div class="p-4 border rounded-3 bg-light mt-4">
+							<h5 class="fw-bold mb-3" style="color: #1a362d;">🎯 Pro Tips</h5>
+							<ul class="mb-0 ps-3">
+								<li class="mb-2">Perform a quick drop, keeping knees bent and legs loaded.</li>
+								<li class="mb-2">Time the drop just as your opponent is about to strike the shuttle.</li>
+								<li>Keep body weight leaning forward on the balls of your feet.</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- TAB 3: LOW SERVE -->
+					<div class="tab-pane fade" id="serve" role="tabpanel" aria-labelledby="v-pills-serve-tab">
+						<h1 class="guide-content-title">The Low Serve: Precision, Control &amp; Net Clearance</h1>
+						<p class="text-muted text-uppercase mb-4" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">
+							Fundamentals &bull; 5 Min Read
+						</p>
+						<img src="serve.jpg" alt="Badminton Service" class="img-fluid w-100 rounded mb-4" style="height: 400px; object-fit: cover;">
+
+						<h4>Mastering Net Clearance</h4>
+						<p>The serve is the only shot in badminton where you have total control. A sharp low serve skims the tape, preventing your opponent from attacking early and forcing them to lift, giving your team immediate control of the rally.</p>
+
+						<!-- EMBEDDED VIDEO -->
+						<div class="ratio ratio-16x9 mb-2">
+							<iframe
+								src="https://www.youtube.com/embed/ZlPxYx7VRGA"
+								title="Backhand Serve Like A PRO - Step-By-Step Tutorial!"
+								allowfullscreen>
+							</iframe>
+						</div>
+						<p class="text-muted text-center mb-4" style="font-size: 0.85rem;">
+							Video tutorial by <a href="https://www.youtube.com/watch?v=ZlPxYx7VRGA" target="_blank" class="text-decoration-underline">Badminton Insight</a>.
+						</p>
+
+						<!-- TABLE SECTION -->
+						<h4 class="mt-4 mb-3">Low Serve vs. High Serve Comparison</h4>
+						<div class="table-responsive mb-4">
+							<table class="table table-bordered align-middle bg-white">
+								<thead class="table-dark" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; letter-spacing: 1px;">
+									<tr>
+										<th scope="col">Factor</th>
+										<th scope="col">Low Serve</th>
+										<th scope="col">High / Flick Serve</th>
+									</tr>
+								</thead>
+								<tbody style="font-size: 0.95rem;">
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Trajectory</th>
+										<td>Flat, tight over the net tape into front court</td>
+										<td>High arc reaching the baseline rear court</td>
+									</tr>
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Primary Purpose</th>
+										<td>Prevents opponent attack; forces an upward lift</td>
+										<td>Pushes opponent back; creates time and space</td>
+									</tr>
+									<tr>
+										<th scope="row" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;">Primary Discipline</th>
+										<td>Essential in Doubles &amp; competitive Singles</td>
+										<td>Primarily used in Singles &amp; tactical variation</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- TEXT-ONLY PRACTICE CUES -->
+						<div class="p-4 border rounded-3 bg-light mt-4">
+							<h5 class="fw-bold mb-3" style="color: #1a362d;">🎯 Pro Tips</h5>
+							<ul class="mb-0 ps-3">
+								<li class="mb-2">Hold the racket high up on the grip for maximum control.</li>
+								<li class="mb-2">Pinch shuttle feathers at a 45-degree angle close to the strings.</li>
+								<li>Use a compact, smooth forearm push without rushing your backswing.</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="site-footer">
+		<div class="container text-center py-4">
+			<a href="index.html" class="footer-brand">Zephra</a>
+
+			<div class="footer-links d-flex justify-content-center gap-4 my-3">
+				<a href="index.html">Home</a>
+				<a href="history.html">History</a>
+				<a href="techniques.html">Guides</a>
+				<a href="feedback.html">Feedback</a>
+				<a href="contact.html">Contact</a>
+			</div>
+
+			<hr class="footer-divider mx-auto my-3" />
+
+			<p class="footer-copy mb-0">&copy; 2026 ZEPHRA. Built by Rian & Wen Rui. All rights reserved.</p>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="techniques.js"></script>
 </body>
 </html>
