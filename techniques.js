@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
       // Check the current URL hash
       function activateTabFromHash() {
         if (window.location.hash) {
-          let hash = window.location.hash;
-          let targetTab = document.querySelector(`[data-bs-target="${hash}"]`);
+          const hash = window.location.hash;
+          const targetTab = document.querySelector(`[data-bs-target="${hash}"]`);
           if (targetTab) {
             let tab = new bootstrap.Tab(targetTab);
             tab.show();
