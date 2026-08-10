@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- STYLESHEETS -->
+    <!-- Bootstrap & Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="history.css">
 </head>
@@ -19,29 +20,38 @@
 <body>
 
     <!-- NAVBAR -->
-    <header class="navbar fixed-top">
-    <div class="nav-wrap">
+    <header class="navbar navbar-expand-md fixed-top bg-white border-bottom">
+        <div class="container-fluid max-width-1200 px-3 px-md-4">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="nav-brand fw-bold text-decoration-none">Zephra</a>
 
-        <nav class="nav-left">
-            <a href="index.html" class="nav-item">Home</a>
-            <a href="history.html" class="nav-item active">History</a>
-            <a href="feedback.html" class="nav-item ">Feedback</a>
-            <a href="contact.html" class="nav-item">Contact</a>
-        </nav>
+            <!-- Hamburger Toggle Button (Hidden on desktop, visible on phone) -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#zephraNavbar" aria-controls="zephraNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <a href="index.html" class="nav-brand">Zephra</a>
+            <!-- Collapsible Navigation Links -->
+            <div class="collapse navbar-collapse mt-3 mt-md-0" id="zephraNavbar">
+            
+            <!-- Left Links -->
+            <nav class="nav-left navbar-nav me-auto mb-2 mb-md-0 d-flex gap-md-3">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="history.html" class="nav-item nav-link">History</a>
+                <a href="feedback.html" class="nav-item nav-link">Feedback</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </nav>
 
-        <div class="nav-right">
-            <div class="search-box">
-                <input type="text" class="search-input" placeholder="Search guides...">
-                <div class="search-btn"></div>
+            <!-- Right Links & Search -->
+            <div class="nav-right navbar-nav align-items-md-center gap-2 gap-md-3">
+                <a href="signin.html" class="nav-item nav-link">Sign In</a>
+                <a href="saved.html" class="nav-item nav-link">Saved</a>
             </div>
-            <a href="signin.html" class="nav-item">Sign In</a>
-            <a href="saved.html" class="nav-item">Saved</a>
-        </div>
 
-    </div>
-</header>
+            </div>
+
+        </div>
+    </header>
 
     <!-- PAGE TITLE -->
     <div class="page-title-wrap">
@@ -93,5 +103,6 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
