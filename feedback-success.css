@@ -1,0 +1,71 @@
+/* ==========================================================================
+   FEEDBACK SUCCESS PAGE
+   ========================================================================== */
+
+body {
+    background: #f2ede2;
+}
+
+.nav-brand {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+}
+
+.card {
+    background: #ffffff;
+    border-top: 3px solid #b5541f !important;
+}
+
+.card h2 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: #1a362d !important;
+}
+
+.card .text-muted {
+    color: #55726b !important;
+}
+
+#submittedDataBox {
+    background: #f2ede2 !important;
+    border-color: #e2dccc !important;
+}
+
+#submittedDataBox strong {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #1a362d;
+}
+
+#submittedDataBox .text-secondary {
+    color: #55726b !important;
+}
+
+#submittedDataBox p.bg-white {
+    border-color: #e2dccc !important;
+}
+
+.btn-primary {
+    background-color: #b5541f;
+    border-color: #b5541f;
+    border-radius: 24px;
+}
+
+.btn-primary:hover {
+    background-color: #8f3f16;
+    border-color: #8f3f16;
+}
+
+.btn-outline-secondary {
+    color: #1a362d;
+    border-color: #e2dccc;
+    border-radius: 24px;
+}
+
+.btn-outline-secondary:hover {
+    background-color: transparent;
+    color: #8f3f16;
+    border-color: #b5541f;
+}
