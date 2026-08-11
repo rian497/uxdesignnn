@@ -4,50 +4,71 @@
 
 /* Page Background */
 body {
-    font-family: 'Source Sans 3', sans-serif;
-    line-height: 1.6;
-    background-color: #F4F1EA;
-    color: #1D2620;
-    min-height: 100vh;
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
+	font-family: 'Source Sans 3', sans-serif;
+	line-height: 1.6;
+	background-color: #F4F1EA;
+	color: #1D2620;
+	min-height: 100vh;
+	padding-top: 100px;
+	display: flex;
+	flex-direction: column;
 }
 
 /* ---------- CONTACT: PAGE TITLE ---------- */
 
 .page-title-wrap {
-    text-align: center;
+	text-align: center;
 }
 
 .page-title {
-    font-family: 'Source Sans 3', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 44px;
-    color: #16382C;
-    line-height: 1.15;
+	font-family: 'Source Sans 3', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 44px;
+	color: #16382C;
+	line-height: 1.15;
 }
 
 /* ---------- CONTACT: FORM CARD ---------- */
 
 .contact-card {
-    background: #FFFFFF;
-    border-radius: 18px;
-    box-shadow: 0 12px 35px rgba(22, 56, 44, 0.06);
-    border: 1px solid #DCD7C7;
-    padding: 46px;
+	background: #FFFFFF;
+	border-radius: 18px;
+	box-shadow: 0 12px 35px rgba(22, 56, 44, 0.06);
+	border: 1px solid #DCD7C7;
+	padding: 46px;
 }
 
 .form-label {
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    color: #16382C;
-    margin-bottom: 10px;
+	font-family: 'Source Sans 3', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	color: #16382C;
+	margin-bottom: 10px;
 }
 
 .form-control {
+	font-family: 'Source Sans 3', sans-serif;
+	border: 1.5px solid #DCD7C7;
+	border-radius: 10px;
+	padding: 14px 18px;
+	font-size: 15.5px;
+	color: #1D2620;
+	background-color: #FFFFFF;
+	transition: all 0.25s ease;
+}
+
+.form-control::placeholder {
+	color: #A8A392;
+}
+
+.form-control:focus {
+	border-color: #BE5B33;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 0 4px rgba(190, 91, 51, 0.12);
+	outline: none;
+}
+.form-select {
     font-family: 'Source Sans 3', sans-serif;
     border: 1.5px solid #DCD7C7;
     border-radius: 10px;
@@ -58,92 +79,87 @@ body {
     transition: all 0.25s ease;
 }
 
-.form-control::placeholder {
-    color: #A8A392;
-}
-
-.form-control:focus {
+.form-select:focus {
     border-color: #BE5B33;
     background-color: #FFFFFF;
     box-shadow: 0 0 0 4px rgba(190, 91, 51, 0.12);
     outline: none;
 }
-
 .btn-send {
-    background-color: #16382C;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 10px;
-    padding: 14px 38px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 600;
-    font-size: 14.5px;
-    letter-spacing: 0.3px;
-    transition: all 0.2s ease;
+	background-color: #16382C;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 10px;
+	padding: 14px 38px;
+	font-family: 'Source Sans 3', sans-serif;
+	font-weight: 600;
+	font-size: 14.5px;
+	letter-spacing: 0.3px;
+	transition: all 0.2s ease;
 }
 
 .btn-send:hover {
-    background-color: #2F5C46;
-    color: #FFFFFF;
-    transform: translateY(-1px);
+	background-color: #2F5C46;
+	color: #FFFFFF;
+	transform: translateY(-1px);
 }
 
 .btn-send:disabled {
-    background-color: #A8A392;
-    transform: none;
-    cursor: not-allowed;
+	background-color: #A8A392;
+	transform: none;
+	cursor: not-allowed;
 }
 
 .field-error {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 12.5px;
-    color: #954726;
-    margin-top: 6px;
-    display: none;
+	font-family: 'Source Sans 3', sans-serif;
+	font-size: 12.5px;
+	color: #954726;
+	margin-top: 6px;
+	display: none;
 }
 
 .field-error.show {
-    display: block;
+	display: block;
 }
 
 .form-status {
-    display: none;
-    margin-bottom: 24px;
-    padding: 14px 18px;
-    border-radius: 10px;
-    font-size: 14.5px;
+	display: none;
+	margin-bottom: 24px;
+	padding: 14px 18px;
+	border-radius: 10px;
+	font-size: 14.5px;
 }
 
 .form-status.show {
-    display: block;
+	display: block;
 }
 
 .form-status.success {
-    background: #EAF1EC;
-    color: #16382C;
-    border-left: 3px solid #2F5C46;
+	background: #EAF1EC;
+	color: #16382C;
+	border-left: 3px solid #2F5C46;
 }
 
 /* ---------- STICKY FOOTER ---------- */
 
 .site-footer {
-    margin-top: auto;
+	margin-top: auto;
 }
 
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 860px) {
-    .page-title {
-        font-size: 32px;
-    }
+	.page-title {
+		font-size: 32px;
+	}
 
-    .contact-card {
-        padding: 30px 24px;
-    }
+	.contact-card {
+		padding: 30px 24px;
+	}
 }
 
 @media (max-width: 576px) {
-    body {
-        padding-top: 80px;
-    }
+	body {
+		padding-top: 80px;
+	}
 }
