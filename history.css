@@ -1,3 +1,10 @@
+/* ==========================================================
+   ZEPHRA HISTORY PAGE
+   ========================================================== */
+
+
+/* ---------- BASE STYLES ---------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +12,7 @@
 }
 
 body {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     line-height: 1.6;
     background: #F3F0E7;
     color: #1D2620;
@@ -13,307 +20,8 @@ body {
     padding-top: 80px;
 }
 
-.hero {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 64px 30px 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
 
-.hero-eyebrow {
-    font-family: 'Karla', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: #2F5C46;
-    margin-bottom: 18px;
-}
-
-.hero-title {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 46px;
-    line-height: 1.1;
-    color: #16382C;
-    margin-bottom: 22px;
-}
-
-.hero-copy {
-    font-size: 16.5px;
-    line-height: 1.75;
-    color: #40473F;
-    max-width: 460px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: 14.5px;
-    font-weight: 600;
-    font-family: 'Karla', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.btn-primary {
-    background: #BE5B33;
-    color: white;
-    box-shadow: 0 4px 15px rgba(190, 91, 51, 0.3);
-}
-
-.btn-primary:hover {
-    background: #954726;
-    margin-top: -2px;
-    margin-bottom: 2px;
-    box-shadow: 0 6px 20px rgba(190, 91, 51, 0.4);
-}
-
-.btn-text {
-    background: transparent;
-    color: #16382C;
-    padding: 15px 0;
-    font-weight: 600;
-    border-bottom: 2px solid #16382C;
-    border-radius: 0;
-}
-
-.btn-text:hover {
-    color: #954726;
-    border-color: #954726;
-}
-
-.hero-images {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: 18px;
-    align-items: start;
-}
-
-.hero-images img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-    display: block;
-}
-
-.hero-images .img-a {
-    height: 300px;
-    margin-top: 40px;
-}
-
-.hero-images .img-b {
-    height: 420px;
-}
-
-/* ---------- BANNER ---------- */
-
-.banner {
-    position: relative;
-    width: 100%;
-    height: 380px;
-    margin-top: 60px;
-    overflow: hidden;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-}
-
-.banner::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, rgba(22, 56, 44, 0.75) 0%, rgba(22, 56, 44, 0.15) 55%, rgba(22, 56, 44, 0) 100%);
-}
-
-.banner-caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 34px 40px;
-    max-width: 1180px;
-    margin: 0 auto;
-    z-index: 2;
-}
-
-.banner-caption p {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 26px;
-    color: #F3F0E7;
-    max-width: 560px;
-    line-height: 1.3;
-}
-
-.banner-caption a {
-    display: inline-block;
-    margin-top: 14px;
-    font-family: 'Karla', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    color: #F3F0E7;
-    border-bottom: 1px solid rgba(243, 240, 231, 0.6);
-    text-decoration: none;
-}
-
-/* ---------- FEATURED GUIDE ---------- */
-
-.featured-wrap {
-    max-width: 1000px;
-    margin: 70px auto 90px;
-    padding: 0 30px;
-}
-
-.section-label {
-    font-family: 'Karla', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: #5B6259;
-    border-bottom: 1px solid #DCD7C7;
-    padding-bottom: 14px;
-    margin-bottom: 30px;
-}
-
-.product-container {
-    background: #FFFFFF;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(22, 56, 44, 0.1);
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-}
-
-.product-image {
-    background: linear-gradient(165deg, #EEEBDF 0%, #E3DFCE 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 40px;
-    position: relative;
-}
-
-.award-badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 78px;
-    height: 78px;
-    background: #16382C;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: 'Karla', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    text-align: center;
-    line-height: 1.4;
-}
-
-.shuttle-mark {
-    width: 170px;
-    height: 170px;
-}
-
-.product-details {
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.eyebrow {
-    font-family: 'Karla', sans-serif;
-    font-weight: 600;
-    font-size: 11.5px;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: #2F5C46;
-    margin-bottom: 14px;
-}
-
-.product-title {
-    color: #16382C;
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 18px;
-    line-height: 1.15;
-}
-
-.product-description {
-    color: #40473F;
-    font-size: 15.5px;
-    line-height: 1.75;
-    margin-bottom: 24px;
-}
-
-.highlight {
-    color: #954726;
-    font-weight: 600;
-}
-
-.meta-line {
-    display: flex;
-    font-family: 'Karla', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    color: #5B6259;
-    margin-bottom: 28px;
-}
-
-.meta-line span {
-    padding-right: 14px;
-    margin-right: 14px;
-    border-right: 1px solid #DCD7C7;
-}
-
-.meta-line span:last-child {
-    border-right: none;
-}
-
-.action-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-.btn-secondary {
-    background: white;
-    color: #16382C;
-    border: 2px solid #16382C;
-}
-
-.btn-secondary:hover {
-    background: #16382C;
-    color: white;
-    margin-top: -2px;
-    margin-bottom: 2px;
-}
-
-/* ---------- ABOUT: PAGE TITLE ---------- */
+/* ---------- PAGE TITLE ---------- */
 
 .page-title-wrap {
     max-width: 1180px;
@@ -332,7 +40,8 @@ body {
     color: #16382C;
 }
 
-/* ---------- ABOUT: INTRO ---------- */
+
+/* ---------- INTRODUCTION ---------- */
 
 .about-intro {
     max-width: 1180px;
@@ -348,7 +57,7 @@ body {
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
     color: #16382C;
     line-height: 1.4;
     margin-bottom: 24px;
@@ -378,21 +87,100 @@ body {
     box-shadow: 0 10px 30px rgba(22, 56, 44, 0.12);
     display: block;
 }
-/* Section Divider Line */
+
+
+/* ---------- DIVIDER ---------- */
+
 .section-divider {
     border: none;
     border-top: 1px solid #DCD7C7;
-    max-width: 1100px;             
-    margin: 60px auto;              
+    max-width: 1100px;
+    margin: 60px auto;
     opacity: 0.8;
 }
 
-/* ---------- HISTORY: FEATURE BOXES ---------- */
+
+/* ---------- CLUB HISTORY ---------- */
+
+.club-history {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 30px 50px;
+}
+
+.history-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.history-heading h2 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 34px;
+    color: #16382C;
+    margin-bottom: 12px;
+}
+
+.history-heading > p:last-child {
+    color: #5B6259;
+    font-size: 15.5px;
+    line-height: 1.7;
+}
+
+
+/* ---------- HISTORY ITEMS ---------- */
+
+.history-item {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 30px;
+    padding: 35px 0;
+    border-top: 1px solid #DCD7C7;
+}
+
+.history-item:last-child {
+    border-bottom: 1px solid #DCD7C7;
+}
+
+.history-number {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #BE5B33;
+    padding-top: 5px;
+}
+
+.history-item-content h3 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 25px;
+    color: #16382C;
+    margin-bottom: 10px;
+}
+
+.history-item-content p {
+    max-width: 700px;
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #40473F;
+    margin: 0;
+}
+
+
+/* ---------- FOUNDERS ---------- */
 
 .history-features-wrap {
     max-width: 1180px;
-    margin: 70px auto 100px;
+    margin: 40px auto 100px;
     padding: 0 30px;
+}
+
+.founders-heading {
+    margin-bottom: 40px;
 }
 
 .history-features-grid {
@@ -423,77 +211,134 @@ body {
     font-family: 'Fraunces', serif;
     font-style: italic;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 25px;
     color: #16382C;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
 }
-
 .feature-box-content p {
     font-size: 14.5px;
     line-height: 1.7;
     color: #40473F;
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 
-.feature-box-content a {
-    font-family: 'Karla', sans-serif;
-    font-weight: 600;
-    font-size: 12.5px;
-    letter-spacing: 0.3px;
-    color: #954726;
-    text-decoration: none;
-    border-bottom: 1px solid #954726;
-    padding-bottom: 2px;
-}
+
+/* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 860px) {
-    .hero {
-        grid-template-columns: 1fr;
+
+    .page-title-wrap {
         padding-top: 40px;
     }
 
-    .hero-images {
-        margin-top: 30px;
-    }
-
-    .hero-title {
-        font-size: 34px;
-    }
-
-    .banner {
-        height: 280px;
-    }
-
-    .banner-caption p {
-        font-size: 20px;
-    }
-
-    .product-container {
-        grid-template-columns: 1fr;
-    }
-
-    .product-details {
-        padding: 34px;
-    }
-
-    .action-buttons {
-        flex-direction: column;
-    }
-
     .page-title {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .about-intro {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding-top: 40px;
     }
 
     .about-image img {
-        height: 280px;
+        height: 300px;
+    }
+
+    .section-divider {
+        margin: 40px auto;
+    }
+
+    .club-history {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .history-heading h2 {
+        font-size: 30px;
+    }
+
+    .history-item {
+        grid-template-columns: 60px 1fr;
+        gap: 20px;
+    }
+
+    .history-item-content h3 {
+        font-size: 22px;
     }
 
     .history-features-grid {
         grid-template-columns: 1fr;
+    }
+
+    .feature-box img {
+        height: 400px;
+    }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 576px) {
+
+    body {
+        padding-top: 70px;
+    }
+
+    .page-title-wrap {
+        padding: 35px 20px 5px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .about-intro {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-lead {
+        font-size: 20px;
+    }
+
+    .about-copy p {
+        font-size: 15px;
+    }
+
+    .club-history {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .history-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 28px 0;
+    }
+
+    .history-number {
+        padding-top: 0;
+    }
+
+    .history-item-content h3 {
+        font-size: 21px;
+    }
+
+    .history-item-content p {
+        font-size: 15px;
+    }
+
+    .history-features-wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .feature-box img {
+        height: 350px;
+    }
+
+    .feature-box-content {
+        padding: 24px;
     }
 }
