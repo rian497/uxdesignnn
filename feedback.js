@@ -7,9 +7,9 @@ if (feedbackForm) {
     // Collect the user's form input data
     const feedbackData = {
       topic: document.querySelector('input[name="topic"]:checked')?.nextElementSibling.textContent || "General",
-      name: document.getElementById('userName').value,
-      email: document.getElementById('userEmail').value,
-      message: document.getElementById('userMessage').value,
+      name: document.getElementById('userName').value.trim(),
+      email: document.getElementById('userEmail').value.trim(),
+      message: document.getElementById('userMessage').value.trim(),
       sentiment: document.querySelector('input[name="sentiment"]:checked')?.nextElementSibling.textContent || "N/A"
     };
 
