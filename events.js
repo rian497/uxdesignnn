@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const eventButtons = document.querySelectorAll(".event-btn");
 
-    const registerButtons = document.querySelectorAll(".event-btn");
-
-    registerButtons.forEach(function (button) {
-
+    eventButtons.forEach(function (button) {
         button.addEventListener("click", function (event) {
-
             event.preventDefault();
 
             const rawUser = localStorage.getItem("zephra_user");
@@ -20,14 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             if (user && user.isLoggedIn) {
-                window.location.href = "contact.html";
+                window.location.href = button.href;
             } else {
-                alert("Please sign in before submitting an RSVP.");
+                alert("Please sign in first.");
                 window.location.href = "signin.html";
             }
-
         });
-
     });
-
 });
