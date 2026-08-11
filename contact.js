@@ -8,6 +8,7 @@ if (contactForm) {
 			name: document.getElementById('name').value,
 			email: document.getElementById('email').value,
 			phone: document.getElementById('phone').value,
+            subject: document.getElementById('subject').value,
 			comment: document.getElementById('comment').value
 		};
 		// Save data to localStorage to display on response page
